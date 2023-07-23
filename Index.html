@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ecommerce Responsive full website</title>
+	<!-- Link BootStrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<!--CSS - link -->
+	<link rel="stylesheet" href="style.css">
+
+    <!-- Link Fonte -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<!-- Final Link Fonte -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+	<!-- Link BootStrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+	<header> <!--imagem logo -->
+		<a href="#" class="logo"><img src="logo.png" alt="logo" ></a>
+
+		<!-- itens menu -->
+		<ul class="navmenu">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Produtos</a></li>
+			<li><a href="empresa.html">Cadastrar</a>
+			<ul> <!--Começo do sub menu-->
+				<li><a href="cadastro cliente/cadastrocliente.html">Cadastrar Cliente</a></li>
+				<li><a href="cadastro vendedor/cadastrovendedor.html">Cadastrar Vendedor</a></li>
+				<li><a href="cadastro administrador/cadastroadmin.html">Cadastrar Administrador</a></li>
+			</ul> <!--Fim do sub menu-->
+			</li><!-- Fechamento tag Cadastrar-->
+			<li><a href="login/login.html">Login</a></li>
+			<li><a href="#">Sobre Nós</a></li>
+		</ul>
+
+		<div class="nav-icon"> <!-- Icones Menu -->
+			<a href="#"><i class='bx bx-search'></i></a>
+			<a href="#"><i class='bx bx-user'></i></a>
+			<a href="#"><i class='bx bx-cart'></i></a>
+		</div> <!-- Fim Icones Menu -->
+
+		<div class="bx bx-menu" id="menu-icon"></div>
+	</header> <!--Fim Header -->
+
+	<!-- Seção - HomePage -->
+	<section class="main-home"> <!-- HomePage -->
+		<div class="main-text"> <!-- Texto Principal -->
+			<h1>Produtos de Tecnologia Assistiva <br> 2023</h1>
+			<p>Inovação total!</p>
+
+			<a href="a" class="main-btn">Compre Agora <i class='bx bx-right-arrow-alt'></i></a> 
+		</div>
+
+		<div class="down-arrow"> <!-- Seta para baixo -->
+			<a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+		</div>
+	</section>
+
+	<!-- Seção Carrosel-->
+	<section class=" carousel">
+		<div id="carouselExampleIndicators" class="carousel slide">
+			<div class="carousel-indicators">
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img src="image/c_image1.png" class="d-block w-100" alt="..." >
+			  </div>
+			  <div class="carousel-item">
+				<img src="image/c_image2.png" class="d-block w-100" alt="...">
+			  </div>
+			  <div class="carousel-item">
+				<img src="image/c_image3.png" class="d-block w-100" alt="...">
+			  </div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</section>
+	<!-- Fim Seção Carrosel-->
+	<div class="title">
+		<h2>Nossos Produtos</h2>
+	</div>
+
+	<!-- Seção Produtos -->
+	<section class="container" id="trending">
+
+		<!-- Produto 1 - Aparelho Auditivo -->
+		<div>
+			<img src="image/Produto1.png" alt="Aparelho Auditivo" width="300" height="300">
+			<div class="price"> <!-- dados produto 1 -->
+				<h3>Aid-aparelho auditivo digital gen2</h3>
+				<p>R$254,00</p>
+			</div>
+		</div>
+
+		<!-- Produto 2 - Aparelho Auditivo de condução óssea sem fio -->
+		<div>
+			<img src="image/Produto2.jpeg" alt="Aparelhos Auditivos de condução óssea sem fio" width="300" height="300">
+			<div class="price"> <!-- dados produto 2 -->
+				<h3>Aparelhos Auditivos de condução óssea sem fio</h3>
+				<p>R$103,00</p>
+			</div>
+		</div>
+
+		<!-- Produto 3 - Bengala Dobrável - Guia para deficientes visuais -->
+		<div>
+			<img src="image/Produto3.jpeg" alt="Bengala Dobrável - Guia para deficientes visuais" width="300" height="300">
+			<div class="price"> <!-- dados produto 3 -->
+				<h3>Bengala Dobrável - Guia para deficientes visuais</h3>
+				<p>R$45,00</p>
+			</div>
+		</div>
+
+		<!-- Produto 4 - Lupa Led para pessoas com baixa visão -->
+		<div>
+			<img src="image/Produto4.jpeg" alt="Lupa Led para pessoas com baixa visão" width="300" height="300" >
+			<div class="price"> <!-- dados produto 4 -->
+				<h3>Lupa Led para pessoas com baixa visão</h3>
+				<p>R$81,00</p>
+			</div>
+		</div>
+
+		<!-- Produto 5 - Livro - Quem é que tem medo? Edição em Braille e fonte ampliada -->
+		<div>
+			<img src="image/Produto5.jpeg" alt="Livro - Quem é que tem medo? Edição em Braille e fonte ampliada" width="300" height="300">
+			<div class="price"> <!-- dados produto 5 -->
+				<h3>Livro - Quem é que tem medo? Edição em Braille e fonte ampliada</h3>
+				<p>R$52,00</p>
+			</div>
+		</div>
+
+		<!-- Produto 6 - Fones de Ouvido de Condução Óssea -->
+		<div>
+			<img src="image/Produto6.jpg" alt="Fones de Ouvido de Condução Óssea" width="300" height="300">
+			<div class="price"> <!-- dados produto 6 -->
+				<h3>Fones de Ouvido de Condução Óssea</h3>
+				<p>R$130,00</p>
+			</div>
+		</div>
+	
+	</section><!-- Fim seção produtos-->
+
+	<script type="java.js"></script><!-- Conexão com arquivo Java-->
+
+	<footer id="rodape">
+		<p><strong>© Tellech 2023</strong></p>
+	</footer><!--Fim do rodapé-->
+
+</body>
+</html>
