@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,342;1,400&family=Poppins&display=swap');
+
+/*fundo da página*/
+html{
+	background-color: #eee7e7;
+}
+
+body{
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-align: justify;
+	font-size: 20px;
+}
+
+/*todos os elementos do cabeçalho*/
+#cabec{
+	background-color:#006494;
+	width: 100%;
+	height: 8%;
+	font-size: 30px;
+	color: #ffffff;
+
+    display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+/*menu sem marcadores e margem interna 0*/
+#menu{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+/*elementos li de menu vão ficar em uma linha e na posição relativa*/
+#menu li{
+	height: 100%;
+	display: inline;
+	position: relative;
+}
+
+#menu li a{
+	padding: 10px;
+	text-decoration: none;
+	color: #ffffff;
+	display: inline-block;
+	transition: background .6s;
+	text-align: center;
+	background-color: #006494;
+}
+
+#menu li a:hover{
+	background-color: #003750;
+}
+		
+/*sub menu*/
+
+/*padding 0 para não ter margem dentro e left 0 para ficar na mesma coluna do elemento pai*/
+/*oculta o segundo menu e coloca na posição absoluta*/
+#menu ul{
+	padding: 0;
+	left: 0;
+	display: none;
+	position: absolute;
+}
+
+/*quando passar o mouse em cima da ul dentro de #menu, vai exibir num bloco*/
+#menu li:hover ul{
+	display: block;
+}
+
+/*vai ocupar todo o bloco/linha inteira disponível, porque se não iria ocupar somente o espaço do texto*/
+#menu ul li a{
+	display: block;
+} 
+/*Fim do sub menu*/
+
+
+/*todos os elementos da div container*/
+.container{
+	padding: 1px;
+	padding-inline: 5%; /*margem interna dos lados*/
+	background-color: #ffffff;
+	margin: 0 15%; /*altura e largura*/
+	/*height: 100vh;*/
+}
+
+h1, h2{
+	text-align: center;
+}
+
+h3{
+	color: #006494;
+}
+
+#rodape{
+	background-color: #006494;
+	color: #ffffff;
+	width: 100%;
+	font-size: 12px;
+	text-align: center;
+	padding: 1px;
+}
