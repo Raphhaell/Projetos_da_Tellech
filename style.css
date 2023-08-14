@@ -38,7 +38,7 @@ header{
 }
 .nav-icon{ /* icones */
 	display: flex;
-	align-items: center:;
+	align-items: center;
 }
 .nav-icon i{ 
 	margin-right: 20px;
@@ -81,7 +81,7 @@ section{ /* seção home page */
 .main-text p{ /* Páragrafo - Texto Principal */
 	color: #333c56;
 	font-size:  20px;
-	font-style: italic;;
+	font-style: italic;
 	margin-bottom: 20px;
 }/* Fim Páragrafo */
 .main-btn{ /* botão "comprar" */
@@ -99,12 +99,12 @@ section{ /* seção home page */
 	color: #FFF;
 }
 .main-btn i{ /*adiciona seta */
-	vertical-align: niddle;
+	vertical-align: middle;
 }
 .down-arrow{ /* seta para baixo */
 	position: absolute;
 	top: 85%;
-	right: 11:;
+	right: 11;
 }
 .down i{ 
 	font-size: 30px;
