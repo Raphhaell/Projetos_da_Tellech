@@ -19,9 +19,7 @@
 body {
 
     width: 100%;
-
     height: 100%;
-
     display: flex;
 
     justify-content: center;
@@ -35,11 +33,8 @@ body {
  
 
 .container {
-
     width: 95%;
-
     max-width: 1600px;
-
     display: flex;
 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
@@ -49,112 +44,69 @@ body {
  
 
 .form-image {
-
     width: 40%;
-
     display: flex;
 
     justify-content: center;
 
     align-items: center;
-
     background-color: #fff8dc;
-
     padding: 1.5rem;
-
 }
 
  
 
 .form-image img {
-
     width: 100%;
-
     height: auto;
-
 }
 
  
 
 .form {
-
     width: 60%;
-
     display: flex;
 
     flex-direction: column;
 
     justify-content: center;
-
     background-color: #fff;
-
     padding: 3.5rem;
-
 }
 
  
 
 .form-header {
-
     margin-bottom: 2.5rem;
-
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
-
 }
-
- 
 
 .login-button {
-
     display: flex;
-
     align-items: center;
-
 }
-
- 
 
 .login-button button {
-
     border: none;
-
     background-color: #6c63ff;
-
     padding: 0.7rem 1.4rem;
-
     border-radius: 5px;
-
     cursor: pointer;
-
 }
-
- 
 
 .login-button button:hover {
-
     background-color: #6b63fff1;
-
 }
-
- 
 
 .login-button button a {
-
     text-decoration: none;
-
     font-weight: 500;
-
     font-size: 1.4rem;
-
     color: #fff;
-
 }
-
- 
 
 .form-header h1::after {
 
@@ -165,16 +117,9 @@ body {
     width: 5rem;
 
     height: 0.3rem;
-
     background-color: #6c63ff;
-
     margin: 0 auto;
-
     border-radius: 10px;
-
-}
-
- 
 
 .input-group {
 
@@ -183,9 +128,7 @@ body {
     flex-wrap: wrap;
 
     justify-content: space-between;
-
     padding: 1.5rem 0;
-
 }
 
  
@@ -195,29 +138,21 @@ body {
     display: flex;
 
     flex-direction: column;
-
     margin-bottom: 1.2rem;
-
     width: 48%;
-
 }
 
  
 
 .input-box input {
-
     margin: 0.7rem 0;
-
     padding: 1.5rem 2rem;
-
     border: none;
 
     border-radius: 10px;
 
     box-shadow: 1px 1px 6px #0000001c;
-
     font-size: 1.4rem;
-
 }
 
  
@@ -231,19 +166,11 @@ body {
  
 
 .input-box input:focus-visible {
-
     outline: 1px solid #6c63ff;
-
 }
 
- 
-
-.input-box label,
-
-.gender-inputs label {
-
+.input-box label, .gender-inputs label {
     font-size: 1.4rem;
-
     font-weight: 600;
 
     color: #000000c0;
@@ -256,77 +183,39 @@ body {
 
     color: #000000be;
 
-}
-
- 
-
 .gender-inputs {
-
     display: flex;
-
     align-items: center;
-
     margin-bottom: 1rem;
-
 }
-
- 
 
 .gender-inputs label {
-
     font-size: 1.4rem;
-
     font-weight: 600;
-
     margin-right: 1rem;
-
 }
-
- 
 
 .gender-inputs select {
-
     padding: 0.7rem 1rem;
-
     font-size: 1.4rem;
-
     border: 1px solid #ccc;
-
     border-radius: 5px;
-
     flex: 1;
-
 }
-
- 
 
 .gender-input select::-ms-expand {
-
     display: none;
-
 }
-
- 
 
 .gender-input select {
-
     appearance: none;
-
     background: transparent;
-
     padding-right: 2rem;
-
     background-image: url('sua-imagem.svg');
-
     background-size: 1.2rem;
-
     background-position: right center;
-
     background-repeat: no-repeat;
-
 }
-
- 
 
 .continue-button button {
 
@@ -335,11 +224,8 @@ body {
     margin-top: 2.5rem;
 
     border: none;
-
     background-color: #6c63ff;
-
     padding: 0.7rem;
-
     border-radius: 5px;
 
     cursor: pointer;
@@ -349,9 +235,7 @@ body {
  
 
 .continue-button button:hover {
-
     background-color: #6b63fff1;
-
 }
 
  
@@ -359,9 +243,7 @@ body {
 .continue-button button a {
 
     text-decoration: none;
-
     font-size: 1.4rem;
-
     font-weight: 500;
 
     color: #fff;
@@ -377,33 +259,19 @@ body {
         display: none;
 
     }
-
     .container {
-
         flex-direction: column;
-
     }
-
     .form {
 
         width: 100%;
-
         padding: 3.5rem;
-
     }
-
     .input-box {
-
         width: 100%;
-
     }
-
     .form-header {
-
         flex-direction: column;
-
         align-items: center;
-
     }
-
 }

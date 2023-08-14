@@ -1,81 +1,120 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cadastro_cliente.css.css">
+        <title>Formulário</title>
+    </head>
 
- 
+    <body>
+        <div class="container">
+            <div class="form-image">
+                <img src="assets/img/undraw_pedestrian_crossing_l-6-jv.svg" alt="">
+            </div>
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css.css">
-
-    <title>Formulário</title>
-
-</head>
-
- 
-
-<body>
-
-    <div class="container">
-
-        <div class="form-image">
-
-            <img src="assets/img/undraw_pedestrian_crossing_l-6-jv.svg" alt="">
-
-        </div>
-
-        <div class="form">
-
-            <form action="#">
-
-                <div class="form-header">
-
-                    <div class="title">
-
-                        <h1 style="margin-top: -1rem;">Cadastre-se com Tellech</h1>
-
+            <div class="form">
+                <form action="./cadastro.php" method="post">
+                    <div class="form-header">
+                        <div class="title">
+                            <h1 style="margin-top: -1rem;">Cadastre-se com Tellech</h1>
+                        </div>
                     </div>
 
-                  </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="nome">Nome</label>
+                            <input id="nome" type="text" name="nome" placeholder="Nome completo" required>
+                        </div>
 
-                <div class="input-group">
+                        <div class="input-box">
+                            <label for="datadenascimento">Data de nascimento</label>
+                            <input id="datadenascimento" type="text" name="datadenascimento" placeholder="xx/xx/xxxx" required>
+                        </div>
 
-                    <div class="input-box">
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" placeholder="nomefictício@gmail.com" required>
+                        </div>
 
-                        <label for="firstname">Nome</label>
+                        <div class="input-box">
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                        </div>
 
-                        <input id="firstname" type="text" name="firstname" placeholder="Nome completo" required>
+                        <div class="input-box">
+                            <label for="celu">Celular</label>
+                            <input id="celu" type="tel" name="celu" placeholder="(xx) xxxx-xxxx" required>
+                        </div>
 
+                        <div class="input-box">
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" type="number" name="cpf" placeholder="EX(xxxxxxxxx-xx)" required>
+                        </div>
+
+                        <!-- Campos adicionais -->
+
+                        <div class="input-box">
+                            <label for="telefone1">Telefone fixo</label>
+                            <input id="telefone1" type="text" name="telefone1" placeholder="EX(XXXX-XXXX)">
+                        </div>
+
+                        <div class="input-box">
+                            <label for="logradouro">Logradouro</label>
+                            <input id="logradouro" type="text" name="logradouro" placeholder="Digite aqui" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="numero">Número</label>
+                            <input id="numero" type="number" name="numero" placeholder="Digite aqui" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="complemento">Complemento</label>
+                            <input id="complemento" type="text" name="complemento" placeholder="Digite aqui">
+                        </div>
+
+                        <div class="input-box">
+                            <label for="bairro">Bairro</label>
+                            <input id="bairro" type="text" name="bairro" placeholder="EX:(Bairro fictício)" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="bairro">Cidade</label>
+                            <input id="cidade" type="text" name="cidade" placeholder="São José dos Campos (SP)" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="estado">Estado</label>
+                            <input id="estado" type="text" name="estado" placeholder="EX: São Paulo" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="cep">CEP</label>
+                            <input id="cep" type="text" name="cep" placeholder="EX: xxxxxxxx" required>
+                        <!-- Adicione os outros campos de forma similar -->
                     </div>
 
+                        <select id="genero" name="genero">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                            <option value="nao-dizer">Prefiro não dizer</option>
+                        </select>
+=======
                     <div class="input-box">
 
                         <label for="lastname">Data de nascimento</label>
 
                         <input id="lastname" type="text" name="lastname" placeholder="xx/xx/xxxx" required>
 
+>>>>>>> 9d6780e1858dc3bb887e46d2eeaa117828f95f56
                     </div>
 
-                    <div class="input-box">
-
-                        <label for="email">E-mail</label>
-
-                        <input id="email" type="email" name="email" placeholder="nomefictício@gmail.com" required>
-
-                    </div>
-
-                    <div class="input-box">
-
-                        <label for="number">Celular</label>
-
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
-
+                    <div class="continue-button">
+                        <button class="btn-cadastrar">Login</button>
                     </div>
 
                     <div class="input-box">
