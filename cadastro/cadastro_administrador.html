@@ -14,25 +14,27 @@
             </div>
 
             <div class="form">
-                <form action="#">
+                <form action="cadastro_administrador.php">
                     <div class="form-header">
                         <div class="title">
                             <h1 style="margin-top: -1rem;">Cadastre-se com Tellech</h1>
-                        </div>
-                        <div class="login-button">
-                            <button><a href="#">Entrar</a></button>
                         </div>
                     </div>
 
                     <div class="input-group">
                         <div class="input-box">
-                            <label for="firstname">Nome</label>
-                            <input id="firstname" type="text" name="firstname" placeholder="Nome completo" required>
+                            <label for="nome">Nome</label>
+                            <input id="nome" type="text" name="nome" placeholder="Nome completo" required>
                         </div>
 
                         <div class="input-box">
-                            <label for="lastname">Data de nascimento</label>
-                            <input id="lastname" type="text" name="lastname" placeholder="xx/xx/xxxx" required>
+                            <label for="datadenascimento">Data de nascimento</label>
+                            <input id="datadenascimento" type="text" name="datadenascimento" placeholder="xxxx/xx/xx" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" type="password" name="cpf" placeholder="EX(xxxxxxxxx-xx)" required>
                         </div>
 
                         <div class="input-box">
@@ -41,25 +43,15 @@
                         </div>
 
                         <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="confirmPassword">CPF</label>
-                            <input id="confirmPassword" type="password" name="confirmPassword" placeholder="EX(xxxxxxxxx-xx)" required>
-
-
-                        <div class="input-box">
-                            <label for="field1">Gênero</label>
-                            <input id="field1" type="text" name="field1" placeholder="Coloque aqui seu gênero" >
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
                         </div>
                     </div>
 
                                     <!-- Adicione os outros campos de forma similar -->
                         
                     <div class="continue-button">
-                        <button><a href="#">Continuar</a> </button>
+                        <button class="btn-cadastrar">Cadastrar</button>
                     </div>
                 </form>
             </div>
