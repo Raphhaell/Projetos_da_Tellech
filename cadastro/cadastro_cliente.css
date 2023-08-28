@@ -20,7 +20,7 @@ body {
     width: 95%;
     max-width: 1600px;
     display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    box-shadow: 5px 5px 10px #00000036;
 }
 
 .form-image {
@@ -49,40 +49,16 @@ body {
 .form-header {
     margin-bottom: 2.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-.login-button {
-    display: flex;
-    align-items: center;
-}
-
-.login-button button {
-    border: none;
-    background-color: #6c63ff;
-    padding: 0.7rem 1.4rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-button button:hover {
-    background-color: #6b63fff1;
-}
-
-.login-button button a {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: #fff;
 }
 
 .form-header h1::after {
     content: '';
     display: block;
-    width: 5rem;
+    width: 20rem;
     height: 0.3rem;
-    background-color: #6c63ff;
+    background-color: #006494;
     margin: 0 auto;
     border-radius: 10px;
 }
@@ -104,6 +80,7 @@ body {
 .input-box input {
     margin: 0.7rem 0;
     padding: 1.5rem 2rem;
+    height: 30%;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
@@ -118,7 +95,7 @@ body {
     outline: 1px solid #6c63ff;
 }
 
-.input-box label, .gender-inputs label {
+.input-box label, .genero label {
     font-size: 1.4rem;
     font-weight: 600;
     color: #000000c0;
@@ -128,59 +105,34 @@ body {
     color: #000000be;
 }
 
-.gender-inputs {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.gender-inputs label {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-right: 1rem;
-}
-
-.gender-inputs select {
-    padding: 0.7rem 1rem;
+.genero select {
+    padding: 0.7rem 0.7rem;
     font-size: 1.4rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     flex: 1;
 }
 
-.gender-input select::-ms-expand {
+.genero select::-ms-expand {
     display: none;
 }
 
-.gender-input select {
-    appearance: none;
-    background: transparent;
-    padding-right: 2rem;
-    background-image: url('sua-imagem.svg');
-    background-size: 1.2rem;
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-
 .continue-button button {
+    font-size: 20px;
     width: 100%;
     margin-top: 2.5rem;
-    border: none;
-    background-color: #6c63ff;
+    background-color: #ffffff;
     padding: 0.7rem;
     border-radius: 5px;
+    border: 1px solid #47474d;
     cursor: pointer;
+    transition: 1s;
+    box-shadow: 5px 5px grey;
 }
 
 .continue-button button:hover {
-    background-color: #6b63fff1;
-}
-
-.continue-button button a {
-    text-decoration: none;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #fff;
+    background-color: #1992ca;
+    transition: 1s;
 }
 
 @media screen and (max-width: 1330px) {
