@@ -1,5 +1,5 @@
 <?php
-include('cod_conexao.php');
+include('../cod_conexao.php');
 
 //se existir email e senha, vai fazer o processo de login
 if (isset($_POST['email']) || isset($_POST['senha'])) {
