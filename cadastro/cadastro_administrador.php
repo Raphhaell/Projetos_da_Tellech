@@ -1,5 +1,5 @@
 <?php
-    include_once "cod_conexao.php";
+    include_once ('../cod_conexao.php');
 
     $nome = $_POST['nome'];
     $dataNascimento = $_POST['datadenascimento'];

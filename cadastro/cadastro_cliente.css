@@ -16,7 +16,120 @@ body {
     background: #006494;
 }
 
+header{ /* Cabeçalho */
+	position: fixed;
+    height: 80px;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 10%;
+	background-color: #006494;
+}
+
+.logo img{ /*imagem logo*/
+	max-width: 70px;
+	height: auto;
+}
+
+.logo img:hover{
+	transform: scale(1.1);
+}
+
+.navmenu{ /* menu */
+    list-style-type: none;
+	display: flex;
+}
+
+.navmenu a{
+	color: #FFF;
+	font-size: 20px;
+	text-transform: capitalize;
+	padding: 10px 20px;
+	font-weight: 400;
+	transition: all .42 ease; 
+	text-decoration: none;
+	border-radius: 30px;
+}
+
+.navmenu a:hover{ /* Passamos o mouse sobre os itens do menu e a cor muda.*/
+	color: #B9D2DE;
+	font-size: 22px;
+	/*background-color: #0089c9;*/
+}
+
+/* Submenu Início */
+.navmenu ul{
+    list-style-type: none;
+    padding: 0;
+    left: 0;
+    display: none;
+    position: relative;
+}
+
+.navmenu li:hover ul{
+    display: block;
+}
+
+.navmenu ul li a{ 
+    display: block;
+}
+/* Fim Submenu */
+
+.nav-icon{ /* icones */
+	display: flex;
+	align-items: center;
+}
+
+.nav-icon i{ /*Icones - pesquisa, login e carrinho */
+	margin-right: 20px;
+	color: #FFF;
+	font-size: 28px;
+	font-weight: 400;
+	transition: all .42s ease; 
+}
+
+.nav-icon i:hover{
+	transform: scale(1.1);
+	color: #B9D2DE;
+}
+
+/* Submenu login Início */
+.nav-icon ul{
+    padding: 0;
+    left: 0;
+    display: none;
+    position: relative;
+}
+
+.nav-icon li:hover ul{
+    display: block;
+}
+
+.nav-icon ul li a{ 
+    display: block;
+}
+/* Fim Submenu login */
+
+#menu-icon{ /* icone menu */
+	font-size: 35px;
+	color: #FFF;
+	z-index: 10001;
+	cursor: pointer; 
+}
+
+#menu-icon:hover{
+	transition: all .42s ease;
+	color: #B9D2DE;
+}
+
+
+
 .container {
+    margin-top: 80px;
     width: 95%;
     max-width: 1600px;
     display: flex;
@@ -28,7 +141,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff8dc;
+    background-color: #dcecff;
     padding: 1.5rem;
 }
 
@@ -42,7 +155,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 3.5rem;
 }
 
@@ -92,7 +205,7 @@ body {
 }
 
 .input-box input:focus-visible {
-    outline: 1px solid #6c63ff;
+    outline: 1px solid #006494;
 }
 
 .input-box label, .genero label {
@@ -118,21 +231,23 @@ body {
 }
 
 .continue-button button {
+    margin-left: 30%;
+
     font-size: 20px;
-    width: 100%;
-    margin-top: 2.5rem;
+    width: 40%;
     background-color: #ffffff;
-    padding: 0.7rem;
-    border-radius: 5px;
-    border: 1px solid #47474d;
+    padding: 0.62rem;
+    border-radius: 50px;
     cursor: pointer;
     transition: 1s;
-    box-shadow: 5px 5px grey;
+    border: solid 1px #006494;
+    color: #216c8f;
+    font-weight: 550;
 }
 
 .continue-button button:hover {
-    background-color: #1992ca;
-    transition: 1s;
+    color: #ffffff;
+    background: #007cb9;
 }
 
 @media screen and (max-width: 1330px) {

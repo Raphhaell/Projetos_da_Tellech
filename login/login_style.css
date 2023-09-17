@@ -81,7 +81,6 @@ body * {
     border: none;
     border-radius: 10px;
     padding: 15px; /*somente um valor serve para ambos os eixos (x e y)*/
-    /*background: #514869;*/
     color: #00649494; /*cor do texto que o usuário vai inserir*/
     font-size: 12pt;
     box-shadow: 0px 10px 40px #00000056;
@@ -102,17 +101,19 @@ body * {
 .btn-login{
     width: 100%;
     padding: 16px 0px;
-    margin: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     border: none;
     border-radius: 8px;
     outline: none;
-    /*text-transform: uppercase;  - vai transformar todas as letras em maiúsculo*/
+    font-size: 15px;
     font-weight: 800;
     letter-spacing: 1px;
     color: #FFFFFF;
     background: #006494;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #059be052; /*quarto valor, além da cor, é o spreading*/
+    transition: 1s;
 }
 
 .btn-login:hover{
@@ -123,4 +124,20 @@ body * {
     .card-login{
         width: 85%; /*tem 60%, mas quando for menor que 950px vai ter 85% de width*/
     }
+}
+
+.card-login > p{
+    color: #f0ffffde;
+    font-weight: 800; /*grossura da fonte. 800 é a mais grossa, tipo bold*/
+}
+
+.card-login > p > a{
+    text-decoration: none;
+    color: #0097e2;
+    font-weight: 800; /*grossura da fonte. 800 é a mais grossa, tipo bold*/
+    transition: 1s;
+}
+
+.card-login > p > a:hover{
+    color: #00b7ff;
 }

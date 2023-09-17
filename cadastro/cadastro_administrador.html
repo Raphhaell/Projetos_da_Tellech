@@ -14,7 +14,7 @@
             </div>
 
             <div class="form">
-                <form action="cadastro_administrador.php">
+                <form action="cadastro_administrador.php" method="post">
                     <div class="form-header">
                         <div class="title">
                             <h1 style="margin-top: -1rem;">Cadastre-se com Tellech</h1>
@@ -28,23 +28,23 @@
                         </div>
 
                         <div class="input-box">
-                            <label for="datadenascimento">Data de nascimento</label>
-                            <input id="datadenascimento" type="text" name="datadenascimento" placeholder="xxxx/xx/xx" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="cpf">CPF</label>
-                            <input id="cpf" type="password" name="cpf" placeholder="EX(xxxxxxxxx-xx)" required>
-                        </div>
-
-                        <div class="input-box">
                             <label for="email">E-mail</label>
                             <input id="email" type="email" name="email" placeholder="nomefictício@gmail.com" required>
                         </div>
 
                         <div class="input-box">
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" type="text" name="cpf" placeholder="EX(xxxxxxxxx-xx)" required>
+                        </div>
+
+                        <div class="input-box">
                             <label for="senha">Senha</label>
                             <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="datadenascimento">Data de nascimento</label>
+                            <input id="datadenascimento" type="text" name="datadenascimento" placeholder="xxxx/xx/xx" required>
                         </div>
                     </div>
 

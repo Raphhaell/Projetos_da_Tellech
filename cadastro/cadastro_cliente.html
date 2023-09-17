@@ -6,9 +6,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="cadastro_cliente.css">
         <title>Cadastre-se </title>
+
+        
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     </head>
 
     <body>
+        <header> <!--imagem logo -->
+			<a href="index.html" class="logo"><img src="../Logo_Tellech.png" alt="logo" ></a>
+
+			<!-- itens menu -->
+			<ul class="navmenu">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="#">Produtos</a></li>
+				<li><a href="empresa/testeEmpresa.html">Cadastrar</a>
+				<ul> <!--Começo do sub menu-->
+					<li><a href="cadastro/cadastro_cliente.html">Cadastrar Cliente</a></li>
+					<li><a href="cadastro/cadastro_administrador.html">Cadastrar Administrador</a></li>
+				</ul> <!--Fim do sub menu-->
+				</li><!-- Fechamento tag Cadastrar-->
+				<li><a href="login/login.html">Login</a></li>
+					<ul> <!--Começo do sub menu-->
+						<li><a href="cadastro/cadastro_cliente.html">Cadastrar Cliente</a></li>
+						<li><a href="login/login.html">Login</a></li>
+					</ul> <!--Fim do sub menu-->
+				<li><a href="empresa/quem_somos.html">Sobre Nós</a></li>
+			</ul>
+
+			<div class="nav-icon"> <!-- Icones Menu -->
+				<a href="#"><i class='bx bx-search'></i></a>
+				<a href="login/login.html"><i class='bx bx-user'></i></a>
+				<ul> <!--Começo do sub menu-->
+					<li><a href="cadastro/cadastro_cliente.html">Cadastrar Cliente</a></li>
+					<li><a href="login/login.html">Login</a></li>
+				</ul> <!--Fim do sub menu-->
+				<a href="#"><i class='bx bx-cart'></i></a>
+			</div> <!-- Fim Icones Menu -->
+
+			<div class="bx bx-menu" id="menu-icon"></div>
+		</header> <!--Fim Header -->
+
         <div class="container">
             <div class="form-image">
                 <img src="cadastro_imagem.svg" alt="Imagem de um cadastro">

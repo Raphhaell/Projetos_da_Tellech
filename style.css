@@ -26,6 +26,10 @@ header{ /* Cabeçalho */
 	height: auto;
 }
 
+.logo img:hover{
+	transform: scale(1.1);
+}
+
 .navmenu{ /* menu */
 	display: flex;
 }
@@ -41,7 +45,8 @@ header{ /* Cabeçalho */
 }
 
 .navmenu a:hover{ /* Passamos o mouse sobre os itens do menu e a cor muda.*/
-	color: #7800b4;
+	color: #B9D2DE;
+	font-size: 22px;
 }
 
 /* Submenu Início */
@@ -56,11 +61,11 @@ header{ /* Cabeçalho */
     display: block;
 }
 
-.navmenu ul li a{
+.navmenu ul li a{ 
     display: block;
-} 
-
+}
 /* Fim Submenu */
+
 .nav-icon{ /* icones */
 	display: flex;
 	align-items: center;
@@ -76,14 +81,42 @@ header{ /* Cabeçalho */
 
 .nav-icon i:hover{
 	transform: scale(1.1);
-	color: #b43df0;
+	color: #B9D2DE;
 }
+
+
+/* Submenu login Início */
+.nav-icon ul{
+    padding: 0;
+    left: 0;
+    display: none;
+    position: relative;
+}
+
+.nav-icon li:hover ul{
+    display: block;
+}
+
+.nav-icon ul li a{ 
+    display: block;
+}
+/* Fim Submenu login */
+
+
+
+
+
 
 #menu-icon{ /* icone menu */
 	font-size: 35px;
 	color: #FFF;
 	z-index: 10001;
-	cursor: pointer;
+	cursor: pointer; 
+}
+
+#menu-icon:hover{
+	transition: all .42s ease;
+	color: #B9D2DE;
 }
 
 section{ /* seção home page */
@@ -125,17 +158,16 @@ section{ /* seção home page */
 	text-transform: capitalize;
 	border: 2px solid #111;
 	padding: 12px 25px;
-	transition: all .42 ease;
 	text-decoration: none;
 } /* fim botão */
 
 .main-btn:hover{
-	background-color: #000;
+	background-color: #006494;
 	color: #FFF;
 }
 
 .main-btn i{ /*adiciona seta */
-	vertical-align: niddle;
+	vertical-align: middle;
 }
 
 .down-arrow{ /* seta para baixo */
@@ -153,15 +185,8 @@ section{ /* seção home page */
 }
 
 .down i:hover{
-	background-color: #2c2c2c;
+	background-color: #006494;
 	color: #FFF;
-	transition: all .42 ease;
-}
-
-header.sticky{
-	background: #fff;
-	padding: 20px 10%;
-	box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
 }
 
 .carousel{
