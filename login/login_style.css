@@ -9,6 +9,29 @@ body * {
     box-sizing: border-box;
 }
 
+header{ /* Cabeçalho */
+	position: fixed;
+    height: 70px;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 10%;
+	background-color: #006494;
+}
+
+.logo img{ /*imagem logo*/
+	max-width: 65px;
+	height: auto;
+}
+
+.logo img:hover{
+	transform: scale(1.1);
+}
+
 .login-principal{
     width: 100vw;
     height: 100vh;

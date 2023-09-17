@@ -18,7 +18,7 @@ body {
 
 header{ /* Cabeçalho */
 	position: fixed;
-    height: 80px;
+    height: 70px;
 	width: 100%;
 	top: 0;
 	right: 0;
@@ -31,7 +31,7 @@ header{ /* Cabeçalho */
 }
 
 .logo img{ /*imagem logo*/
-	max-width: 70px;
+	max-width: 65px;
 	height: auto;
 }
 
@@ -39,97 +39,8 @@ header{ /* Cabeçalho */
 	transform: scale(1.1);
 }
 
-.navmenu{ /* menu */
-    list-style-type: none;
-	display: flex;
-}
-
-.navmenu a{
-	color: #FFF;
-	font-size: 20px;
-	text-transform: capitalize;
-	padding: 10px 20px;
-	font-weight: 400;
-	transition: all .42 ease; 
-	text-decoration: none;
-	border-radius: 30px;
-}
-
-.navmenu a:hover{ /* Passamos o mouse sobre os itens do menu e a cor muda.*/
-	color: #B9D2DE;
-	font-size: 22px;
-	/*background-color: #0089c9;*/
-}
-
-/* Submenu Início */
-.navmenu ul{
-    list-style-type: none;
-    padding: 0;
-    left: 0;
-    display: none;
-    position: relative;
-}
-
-.navmenu li:hover ul{
-    display: block;
-}
-
-.navmenu ul li a{ 
-    display: block;
-}
-/* Fim Submenu */
-
-.nav-icon{ /* icones */
-	display: flex;
-	align-items: center;
-}
-
-.nav-icon i{ /*Icones - pesquisa, login e carrinho */
-	margin-right: 20px;
-	color: #FFF;
-	font-size: 28px;
-	font-weight: 400;
-	transition: all .42s ease; 
-}
-
-.nav-icon i:hover{
-	transform: scale(1.1);
-	color: #B9D2DE;
-}
-
-/* Submenu login Início */
-.nav-icon ul{
-    padding: 0;
-    left: 0;
-    display: none;
-    position: relative;
-}
-
-.nav-icon li:hover ul{
-    display: block;
-}
-
-.nav-icon ul li a{ 
-    display: block;
-}
-/* Fim Submenu login */
-
-#menu-icon{ /* icone menu */
-	font-size: 35px;
-	color: #FFF;
-	z-index: 10001;
-	cursor: pointer; 
-}
-
-#menu-icon:hover{
-	transition: all .42s ease;
-	color: #B9D2DE;
-}
-
-
-
 .container {
-    margin-top: 80px;
+    margin-top: 70px;
     width: 95%;
     max-width: 1600px;
     display: flex;

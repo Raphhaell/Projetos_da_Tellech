@@ -34,7 +34,12 @@ header{ /* Cabeçalho */
 	display: flex;
 }
 
+.navmenu li{
+	position: relative;
+}
+
 .navmenu a{
+	display: block;
 	color: #FFF;
 	font-size: 20px;
 	text-transform: capitalize;
@@ -47,6 +52,10 @@ header{ /* Cabeçalho */
 .navmenu a:hover{ /* Passamos o mouse sobre os itens do menu e a cor muda.*/
 	color: #B9D2DE;
 	font-size: 22px;
+
+	/*-moz-box-shadow:0 3px 10px 0 #CCC;
+	-webkit-box-shadow:0 3px 10px 0 #ccc;
+	text-shadow:0px 0px 5px #fff;*/
 }
 
 /* Submenu Início */
@@ -54,16 +63,15 @@ header{ /* Cabeçalho */
     padding: 0;
     left: 0;
     display: none;
-    position: relative;
+    position: absolute;
+	border-radius: 8px;
 }
 
 .navmenu li:hover ul{
+	background-color: #006494;
     display: block;
 }
 
-.navmenu ul li a{ 
-    display: block;
-}
 /* Fim Submenu */
 
 .nav-icon{ /* icones */
@@ -90,16 +98,14 @@ header{ /* Cabeçalho */
     padding: 0;
     left: 0;
     display: none;
-    position: relative;
+    position: absolute;
+	border-radius: 8px;
 }
 
 .nav-icon li:hover ul{
     display: block;
 }
 
-.nav-icon ul li a{ 
-    display: block;
-}
 /* Fim Submenu login */
 
 
