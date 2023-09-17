@@ -189,6 +189,10 @@ h3 {
     color: inherit;
 }
 
+.footer-links a:hover {
+    color: #07AFAF;
+}
+
 /* Texto direitos reservados */
 .footer-distributed .footer-company-name {
     color: #000;
@@ -240,6 +244,10 @@ h3 {
     ;
 }
 
+.footer-distributed .footer-center a:hover{
+	color: #07AFAF;
+}
+
 /* Footer Right */
 .footer-distributed .footer-right {
     width: 30%;
@@ -281,11 +289,7 @@ h3 {
 }
 
 .footer-distributed .footer-icons a:hover {
-    background-color: #3F71EA;
-}
-
-.footer-links a:hover {
-    color: #07AFAF;
+    background-color: #07AFAF;
 }
 
 .footer-right .footer-company-about{
