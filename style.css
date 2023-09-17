@@ -225,11 +225,182 @@ max-width: 100%;
 border-radius: 20px;
 }
 
-#rodape{
-    background-color: #006494;
-    color: #ffffff;
+/* Linha Azul antes do rodapé*/
+#linha-horizontal {
     width: 100%;
-    font-size: 15px;
+    border: 1px solid #006494;
+}
+
+/* Rodapé*/
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+}
+
+/* fundo footer */
+.footer-distributed {
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 18px sans-serif;
+	padding: 20px 50px 60px 50px; /*top, right, bottom, left*/
+	margin-top: 80px;
+ }
+
+ .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+/* Muda a palavra Tellech*/
+.footer-distributed h3 {
+    color: #000;
+    margin: 0;
+}
+
+/* Muda Developer*/
+.footer-distributed h3 span {
+    color: #006494;
+}
+
+/* Footer links */
+.footer-distributed .footer-links {
+    color: #000;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-links a:hover {
+    color: #006494;
+}
+
+/* Texto direitos reservados */
+.footer-distributed .footer-company-name {
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     text-align: center;
-    padding: 1px;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 20px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #000;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-distributed .footer-center a:hover{
+	color: #006494;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #1b1e23;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #006494;
+}
+
+.footer-right .footer-company-about{
+    color: #006494;
+}
+
+.footer-right .footer-company-about strong{ 
+    color: #000;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
 }

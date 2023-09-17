@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 header{
     max-width: 100%;
     max-height: 150px;
@@ -16,21 +17,22 @@ header{
     width: 100%;
     border: 1px solid #000;
 }
+
 nav{
     display: flex;
     align-items: center;
     justify-content: center;
     /* background-image: linear-gradient(#BB96DB, #A2E4E4); -- Se for colocar gradiente no menu */
 }
-nav .logo{
-    
-}*
+
 nav ul{
     list-style: none; /* tira os tópicos */
 }
+
 nav ul li{
     display: inline; /* organiza a lista em linha */
 }
+
 nav ul li a{
     padding: 10px 20px; /* espaçamento entre as palavras da lista */
     text-decoration: none;
@@ -39,13 +41,16 @@ nav ul li a{
     border-radius: 30px;
     transition: 0.6s;
 }
+
 nav ul li a:hover{
     background-color: #5198a5 ;
 }
+
 h3 {
     text-align: center;
     margin: 10px;
 }
+
 /* Seção Integrantes */
 .img{
 	display: flex;
@@ -53,14 +58,17 @@ h3 {
     justify-content: center;
     align-items: center;
 }
+
 .img div{
     margin: 10px;
 }
+
 /* Linha Preta de Corte Integrantes e Textos*/
 #linhahorizontal{
     width: 100%;
     border: 1px solid #000;
 }
+
 /* Grandiente da Apresentação*/
 .boxapresenta {
     background-image: linear-gradient(#07AFAF, #A2E4E4, #BB96DB, #A27CED);
@@ -68,11 +76,13 @@ h3 {
     overflow: auto;
     padding: 3em;
 }
+
 .boxapresenta h2{
     color: #000;
     text-align: center;
     margin: 30px;
 }
+
 .conteudo-apresentação h3{
     text-align: justify;
     text-indent: 50px;
@@ -87,25 +97,31 @@ h3 {
     overflow: auto;
     padding: 3em;
 }
+
 .box .meta h2{
     color: #000;
     text-align: center;
 }
+
 .box .meta #texto{
     margin-top: 65px;
     justify-content: center;
     color: #000;
     text-align: left;
 }
+
 .conteudo-missão{
     display: flex;
 }
+
 .conteudo-visão{
     display: flex;
 }
+
 .conteudo-valores{
     display: flex;
 }
+
 #texto h4 ul li{
     list-style-type: none;
 }
@@ -116,12 +132,7 @@ h3 {
     
 }
 
-/* Rodapé 
-footer {
-    position: fixed;
-    bottom: 0;
-} 
-*/
+/* Rodapé*/
 
 @media (max-height:800px) {
     footer {
@@ -135,11 +146,10 @@ footer {
 
 /* fundo footer */
 .footer-distributed {
-   /* background-color: #8c6cac;*/
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    font: bold 16px sans-serif;
+    font: bold 18px sans-serif;
     padding: 50px 50px 60px 50px;
     margin-top: 80px;
 }
@@ -150,16 +160,17 @@ footer {
 }
 
 /* Footer left */
-
 .footer-distributed .footer-left {
     width: 30%;
 }
+
 /* Muda a palavra Capy*/
 .footer-distributed h3 {
     color: #000;
-    font: normal 36px 'Cookie', cursive;
+    font: normal 38px 'Cookie', cursive;
     margin: 0;
 }
+
 /* Muda Developer*/
 .footer-distributed h3 span {
     color: #07AFAF;
@@ -170,16 +181,18 @@ footer {
     color: #000;
     margin: 20px 0 12px;
 }
+
 .footer-distributed .footer-links a {
     display: inline-block;
     line-height: 1.8;
     text-decoration: none;
     color: inherit;
 }
+
 /* Texto direitos reservados */
 .footer-distributed .footer-company-name {
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     margin: 0;
 }
@@ -188,6 +201,7 @@ footer {
 .footer-distributed .footer-center {
     width: 35%;
 }
+
 .footer-distributed .footer-center i {
     background-color: #33383b;
     color: #ffffff;
@@ -200,16 +214,19 @@ footer {
     margin: 10px 15px;
     vertical-align: middle;
 }
+
 .footer-distributed .footer-center i.fa-envelope {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 38px;
 }
+
 .footer-distributed .footer-center p {
     display: inline-block;
     color: #000;
     vertical-align: middle;
     margin: 0;
 }
+
 .footer-distributed .footer-center p span {
     display: block;
     font-weight: normal;
@@ -227,23 +244,27 @@ footer {
 .footer-distributed .footer-right {
     width: 30%;
 }
+
 .footer-distributed .footer-company-about {
     line-height: 20px;
     color: #000;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: normal;
     margin: 0;
 }
+
 .footer-distributed .footer-company-about span {
     display: block;
     color: #000;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 .footer-distributed .footer-icons {
     margin-top: 25px;
 }
+
 .footer-distributed .footer-icons a {
     display: inline-block;
     width: 35px;
@@ -258,6 +279,7 @@ footer {
     margin-right: 3px;
     margin-bottom: 5px;
 }
+
 .footer-distributed .footer-icons a:hover {
     background-color: #3F71EA;
 }
@@ -265,12 +287,15 @@ footer {
 .footer-links a:hover {
     color: #07AFAF;
 }
+
 .footer-right .footer-company-about{
     color: #07AFAF;
 }
+
 .footer-right .footer-company-about strong{ 
     color: #000;
 }
+
 @media (max-width: 880px) {
     .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
         display: block;
