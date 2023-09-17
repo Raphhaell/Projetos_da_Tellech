@@ -33,6 +33,7 @@ header{ /* Cabeçalho */
 .logo img{ /*imagem logo*/
 	max-width: 65px;
 	height: auto;
+    transition: all .42s ease;
 }
 
 .logo img:hover{

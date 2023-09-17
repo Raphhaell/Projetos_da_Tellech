@@ -120,7 +120,7 @@ header{ /* Cabeçalho */
     outline: 1px solid #006494;
 }
 
-.input-box label, .genero label {
+.input-box label{
     font-size: 1.4rem;
     font-weight: 600;
     color: #000000c0;
@@ -130,23 +130,11 @@ header{ /* Cabeçalho */
     color: #000000be;
 }
 
-.genero select {
-    padding: 0.7rem 0.7rem;
-    font-size: 1.4rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    flex: 1;
-}
-
-.genero select::-ms-expand {
-    display: none;
-}
-
 .continue-button button {
-    margin-left: 30%;
+    margin-left: 200%;
 
     font-size: 20px;
-    width: 40%;
+    width: 300%;
     background-color: #ffffff;
     padding: 0.62rem;
     border-radius: 50px;
@@ -158,8 +146,8 @@ header{ /* Cabeçalho */
 }
 
 .continue-button button:hover {
+    background-color: #007cb9;
     color: #ffffff;
-    background: #007cb9;
 }
 
 @media screen and (max-width: 1330px) {
