@@ -399,7 +399,7 @@ border-radius: 20px;
     color: #000;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 850px) {
 	.navmenu{
 		display: none;
 	}

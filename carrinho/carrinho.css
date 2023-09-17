@@ -12,15 +12,137 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Estilos para o cabeçalho */
-header {
-    background: url(img/header.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 300px;
+header{ /* Cabeçalho */
+	position: fixed;
+	width: 100%;
+	height: 8.5%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 10%;
+	background-color: #006494;
 }
 
-header h1 {
+.logo img{ /*imagem logo*/
+	max-width: 70px;
+	height: auto;
+	transition: all .42s ease;
+}
+
+.logo img:hover{
+	transform: scale(1.1);
+}
+
+.navmenu{ /* menu */
+	display: flex;
+}
+
+.navmenu li{
+    list-style: none;
+	position: relative;
+}
+
+.navmenu a{
+	display: block;
+	color: #FFF;
+	font-size: 20px;
+	text-transform: capitalize;
+	padding: 10px 20px;
+	font-weight: 400;
+	text-decoration: none;
+	transition: all .42s ease;
+}
+
+.navmenu a:hover{ /* Passamos o mouse sobre os itens do menu e a cor muda.*/
+	transform: scale(1.1);
+	color: #B9D2DE;
+
+	/*-moz-box-shadow:0 3px 10px 0 #CCC;
+	-webkit-box-shadow:0 3px 10px 0 #ccc;
+	text-shadow:0px 0px 5px #fff;*/
+}
+
+.nav-icon{ /* icones */
+	display: flex;
+	align-items: center;
+}
+
+.nav-icon i{ /*Icones - pesquisa, login e carrinho */
+	z-index: 999;
+	margin-right: 20px;
+	color: #FFF;
+	font-size: 28px;
+	font-weight: 400;
+	transition: all .42s ease; 
+}
+
+.nav-icon i:hover{
+	transform: scale(1.1);
+	color: #B9D2DE;
+}
+
+/*Menu lateral*/
+.menu-checkbox{
+	position: absolute;
+	z-index: 1000;
+	width: 35px;
+	height: 35px;
+	opacity: 0; /*está na tela, mas é transparente*/
+	cursor: pointer;
+}
+
+.menu-checkbox:hover ~ #menu-icon{ /*quando passar o mouse no checkbox, o elemento que está no mesmo nível (três traços) vai fazer:*/
+	transition: all .42s ease;
+	transform: scale(1.1);
+	color: #B9D2DE;
+}
+
+.menu-checkbox:checked ~ ul{ /*quando selecionar o checkbox, o elemento ul*/
+	margin-right: 0;
+}
+
+#menu-icon{ /* icone menu */
+	font-size: 35px;
+	color: #FFF;
+	z-index: 999;
+}
+
+.menu-hamburguer ul{
+	position: absolute;
+	z-index: 998;
+	right: 0;
+	top: 8.5vh;
+	width: 300px;
+	height: 100vh;
+	background-color: #006494;
+	margin-right: -300px;
+	transition: all ease .42s;
+}
+
+.menu-hamburguer li{
+    list-style: none;
+	padding: 10px 30px;
+}
+
+.menu-hamburguer a{
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 20px;
+	transition: all .42s ease;
+}
+
+.menu-hamburguer a:hover{
+	transform: scale(1.1);
+	color: #B9D2DE;
+}
+/*Fim do menu lateral*/
+/*Fim do cabeçalho*/
+
+h1 {
+    margin-top: 8.5vh;
     text-align: center;
     font-size: 35px;
     color: #000;
@@ -226,6 +348,191 @@ header h1 {
 .carrito-total .btn-pagar:hover {
     transform: scale(1.05);
 }
+
+
+/* Linha Azul antes do rodapé*/
+#linha-horizontal {
+    margin-top: 80px;
+    width: 100%;
+    border: 1px solid #006494;
+}
+
+/* Rodapé*/
+
+/* fundo footer */
+.footer-distributed {
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 18px sans-serif;
+	padding: 20px 50px 60px 50px; /*top, right, bottom, left*/
+	margin-top: 80px;
+ }
+
+ .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+/* Muda a palavra Tellech*/
+.footer-distributed h3 {
+    color: #000;
+    margin: 0;
+}
+
+/* Muda Developer*/
+.footer-distributed h3 span {
+    color: #006494;
+}
+
+/* Footer links */
+.footer-distributed .footer-links {
+    color: #000;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-links a:hover {
+    color: #006494;
+}
+
+/* Texto direitos reservados */
+.footer-distributed .footer-company-name {
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 20px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #000;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-distributed .footer-center a:hover{
+	color: #006494;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #1b1e23;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #006494;
+}
+
+.footer-right .footer-company-about{
+    color: #006494;
+}
+
+.footer-right .footer-company-about strong{ 
+    color: #000;
+}
+
+@media (max-width: 850px) {
+	.navmenu{
+		display: none;
+	}
+
+	.menu-hamburguer ul{
+		width: 30%;
+	}
+
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}
+
 
 /* Estilos responsivos */
 @media screen and (max-width: 850px) {
