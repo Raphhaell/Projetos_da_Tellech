@@ -37,10 +37,10 @@
 					<li><a href="index.html">Home</a></li>
 					<li><a href="carrinho/carrinho.html">Produtos</a></li>
 					<li><a href="#">Cadastrar</a>
-					<ul> <!--Começo do sub menu-->
-						<li><a href="cadastro/cadastro_cliente.html">Cadastrar Cliente</a></li>
-						<li><a href="cadastro/cadastro_administrador.html">Cadastrar Administrador</a></li>
-					</ul> <!--Fim do sub menu-->
+						<ul> <!--Começo do sub menu-->
+							<li><a href="cadastro/cadastro_cliente.html">Cadastrar Cliente</a></li>
+							<li><a href="cadastro/cadastro_administrador.html">Cadastrar Administrador</a></li>
+						</ul> <!--Fim do sub menu-->
 					</li><!-- Fechamento tag Cadastrar-->
 					<li><a href="login/login.html">Login</a></li>
 					<li><a href="empresa/empresa.html">Sobre Nós</a></li>
@@ -48,15 +48,23 @@
 
 				<div class="nav-icon"> <!-- Icones Menu -->
 					<a href="#"><i class='bx bx-search'></i></a>
-					<a href="login/login.html"><i class='bx bx-user'></i></a>
-					<ul> <!--Começo do sub menu-->
-						<li><a href="cadastro/cadastro_cliente.html">Cadastrar Cliente</a></li>
-						<li><a href="login/login.html">Login</a></li>
-					</ul> <!--Fim do sub menu-->
+					<a href="login/login.html"><i class='bx bx-user' id="user-icon"></i></a>
 					<a href="#"><i class='bx bx-cart'></i></a>
 				</div> <!-- Fim Icones Menu -->
 
-				<div class="bx bx-menu" id="menu-icon"></div>			
+				<nav class="menu-hamburguer">
+					<input type="checkbox" class="menu-checkbox"/>
+
+					<div class="bx bx-menu" id="menu-icon"></div>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="carrinho/carrinho.html">Produtos</a></li>
+						<li><a href="FAQ/faq.html">FAQ</a></li>
+						<li><a href="empresa/empresa.html">Sobre Nós</a></li>
+						<li><a href="login/login.html">Login</a></li>
+						<li><a href="cadastro/cadastro_cliente.html">Cadastro</a></li>
+					</ul>
+				</nav>
 		</header> <!--Fim Header -->
 
 		<!-- Seção - HomePage -->
