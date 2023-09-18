@@ -22,9 +22,8 @@
 
     if ($resultado === FALSE)
         echo "Erro na inclusão do registro..." . mysqli_error($conexao) . "</br>";
-    else
-        echo mysqli_affected_rows($conexao) . " registro incluído com sucesso!</br>";
-
+    
     mysqli_close($conexao);
 
+    header("Location: ../index.html");
 ?>
