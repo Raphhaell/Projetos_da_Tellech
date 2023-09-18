@@ -7,6 +7,6 @@ if (!isset($_SESSION)) {
 //se existir sessão, vai destruí-la
 session_destroy();
 
-header("Location: login.html");
+header("Location: ../index.html");
 
 ?>

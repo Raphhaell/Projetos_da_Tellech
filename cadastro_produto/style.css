@@ -1,0 +1,83 @@
+body{
+    background-image: url(t.jpg);
+    -webkit-background-size:cover;
+    background-size:cover;
+    background-position: center center; 
+}
+
+header{ /* Cabeçalho */
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10%;
+    background-color: #006494;
+}
+        
+.logo img{ /*imagem logo*/
+    max-width: 65px;
+    height: auto;
+    transition: all .42s ease;
+}
+        
+.logo img:hover{
+    transform: scale(1.1);
+}
+
+.success, .error {
+    color: white;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+}
+
+.success {
+    background: green;
+}
+
+.error {
+    background: red;
+}
+
+
+.container{
+    margin-top: 8.5%;
+}
+
+/* front dos produtos se vira ai */
+
+.cad-produto{
+    border-radius: 20px;
+}
+.cad-produto .card-header{
+    border-radius: 20px 20px 0 0;
+}
+
+.btn-cad{
+    width: 100px;
+    background-color: #ffffff;
+    border: solid 1px #006494;
+    color: #216c8f;
+    font-size: 20px;
+    transition: 1s;
+}
+.btn-cad:hover{
+    background-color: #007cb9;
+    color: #ffffff;
+}
+
+.card-prod{
+    width: 200px;
+    border-radius: 20px;
+}
+.card-prod .card-header{
+    border-radius: 20px 20px 0 0;
+}
+
+.bg-warning{
+    background-color: #006494;
+}

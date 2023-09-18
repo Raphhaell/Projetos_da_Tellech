@@ -129,7 +129,6 @@ header{ /* Cabeçalho */
 }
 
 .menu-hamburguer a:hover{
-	transform: scale(1.1);
 	color: #B9D2DE;
 }
 /*Fim do menu lateral*/
@@ -142,12 +141,20 @@ section{ /* seção home page */
 .main-home{ /* home page */
 	width: 100%;
 	height: 100vh;
-	/*background-image: url(banner1.jpeg); */ /*por imagem lateral*/
-	background-position: right;
-	background-size: cover;
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	align-items: center;
+}
+
+.main-text::before{
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: url(imagens/tellechers.jpeg);
+	background-size: cover;
+	background-position: bottom;
+	z-index: -1;
+	opacity: 35%;
 }
 
 .main-text h1{ /* Título Principal*/
@@ -159,14 +166,8 @@ section{ /* seção home page */
 	margin: 6px 0 10px;
 }/* Fim título */
 
-.main-text p{ /* Páragrafo - Texto Principal */
-	color: #333c56;
-	font-size:  20px;
-	font-style: italic;;
-	margin-bottom: 20px;
-}/* Fim Páragrafo */
-
 .main-btn{ /* botão "comprar" */
+	margin-top: 15px;
 	display: inline-block;
 	color: #111;
 	font-size: 16px;
