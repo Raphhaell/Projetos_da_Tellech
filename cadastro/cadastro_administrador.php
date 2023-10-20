@@ -2,7 +2,7 @@
     include_once ('../cod_conexao.php');
 
     $nome = $_POST['nome'];
-    $dataNascimento = $_POST['datadenascimento'];
+    $dataNascimento = implode("-",array_reverse(explode("/", $_POST['datadenascimento'])));
     $cpf = $_POST['cpf'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];

@@ -2,7 +2,7 @@
     include_once ('../cod_conexao.php');
 
     $nome = $_POST['nome'];
-    $dataAbertura = $_POST['datadeabertura'];
+    $dataAbertura = implode("-",array_reverse(explode("/", $_POST['datadeabertura'])));
     $cnpj = $_POST['cnpj'];
     $celular = $_POST['celu'];
     $telefone1 = $_POST['telefone1'];
