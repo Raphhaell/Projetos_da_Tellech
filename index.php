@@ -51,7 +51,7 @@ session_start();
 			<div class="main-text"> <!-- Texto Principal -->
 				<h1>Produtos de Tecnologia Assistiva <br> 2023</h1>
 
-				<a href="produtos/produtos.html" class="main-btn">Compre Agora <i class='bx bx-right-arrow-alt'></i></a> 
+				<a href="produtos/produto.php" class="main-btn">Compre Agora <i class='bx bx-right-arrow-alt'></i></a> 
 			</div>
 
 			<div class="down-arrow"> <!-- Seta para baixo -->
