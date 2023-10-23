@@ -1,5 +1,6 @@
 <?php
 
+include_once('./cod_conexao.php');
 session_start();
 
 ?>
@@ -43,8 +44,6 @@ session_start();
         }
         ?>
 
-
-		
 
 		<!-- Seção - HomePage -->
 		<section class="main-home"> <!-- HomePage -->
@@ -96,61 +95,42 @@ session_start();
 		<section class="contenedor" id="trending">
             <!-- Contenedor de elementos -->
             <div class="contenedor-items">
-                <div class="item">
-                    <span class="titulo-item">Muleta</span>
-                    <img src="imagens/muleta.jpg" alt="" class="img-item">
-                    <span class="precio-item">R$20,00</span>
-                    <a href="carrinho/carrinho.html"><button class="boton-item" id="ver-produto-btn">Ver produto</button></a>
-                </div>
 
-                <div class="item">
-                    <span class="titulo-item">Cadeira de rodas</span>
-                    <img src="imagens/cadeirarodas.jpg" alt="" class="img-item">
-                    <span class="precio-item">R$25000,00</span>
-                    <button class="boton-item" id="ver-produto-btnn">Ver produto</button>
-                </div>
+				<?php
+				$comando = "SELECT * FROM produto ORDER BY id DESC";
+				$enviar = mysqli_query($conexao, $comando);
+				$resultado = mysqli_fetch_all($enviar, MYSQLI_ASSOC);
+				
+					$a = 0;
+				
+					foreach ($resultado as $produto){
+						if ($a < 2) { //estrutura if para limitar a quantidade de produtos que aparece na tela
+							$codigo = $produto['IdProduto'];
+							$nome = $produto['NomeProduto'];
+							$preco = $produto['Preco'];
 
-                <div class="item">
-                    <span class="titulo-item">Livro em braille</span>
-                    <img src="imagens/livrobraille.png" alt="" class="img-item">
-                    <span class="precio-item">R$35000,00</span>
-                    <button class="boton-item" id="ver-produto-btnnn">Ver produto</button>
-                </div>
+							$midia = $produto['MidiaProduto'];
+							$imagem = imagecreatefromstring($midia);
+							ob_start();
+							imagejpeg($imagem, null, 80);
+							$data = ob_get_contents();
+							ob_end_clean();
+						
+				?>
+						
+							<div class="item">
+								<span class="titulo-item"><?=$nome?></span>
+								<?php echo "<img src=\"data:image/jpg;base64," .  base64_encode($data)  . "\" class=\"img-item\"/>";?>
+								<span class="precio-item">R$<?=$preco?></span>
+								<button class="boton-item" id="ver-produto-btn">Ver produto</button>
+							</div>
 
-                <div class="item">
-                    <span class="titulo-item">Adaptador</span>
-                    <img src="imagens/adaptador.png" alt="" class="img-item">
-                    <span class="precio-item">R$18000,00</span>
-                    <button class="boton-item" id="ver-produto-btnnnn">Ver produto</button>
-                </div>
+				<?php
+					$a = $a + 1;
+					}
+				}
+				?>
 
-                <div class="item">
-                    <span class="titulo-item">Garfo para auxiliar</span>
-                    <img src="imagens/garfo.jpg" alt="" class="img-item">
-                    <span class="precio-item">R$18000,00</span>
-                    <button class="boton-item" id="ver-produto-btnnnnn">Ver produto</button>
-                </div>
-
-                <div class="item">
-                    <span class="titulo-item">Aparelho Auditivo</span>
-                    <img src="imagens/aparelhoauditivo.png" alt="" class="img-item">
-                    <span class="precio-item">R$289,90</span>
-                    <button class="boton-item" id="ver-produto-btnnnnnnn">Ver produto</button>
-                </div>
-
-                <div class="item">
-                    <span class="titulo-item">Fixador multiuso</span>
-                    <img src="imagens/fixador.jpg" alt="" class="img-item">
-                    <span class="precio-item">R$32,00</span>
-                    <button class="boton-item" id="ver-produto-btnnnnnnn">Ver produto</button>
-                </div>
-
-                <div class="item">
-                    <span class="titulo-item">Engrossador em discos</span>
-                    <img src="imagens/engrossador.jpeg" alt="" class="img-item">
-                    <span class="precio-item">R$42,00</span>
-                    <button class="boton-item" id="ver-produto-btnnnnnnnn">Ver produto</button>
-                </div>
             </div>
         </section>
 
@@ -163,9 +143,9 @@ session_start();
 				<h3>Tellech<span>Developer</span></h3>
 	
 				<p class="footer-links">
-					<a href="index.html">Home</a>
+					<a href="index.php">Home</a>
 					|
-					<a href="produtos/produtos.html">Produtos</a>
+					<a href="produtos/produto.php">Produtos</a>
 					|
 					<a href="empresa/empresa.html">Sobre Nós</a>
 				</p>
