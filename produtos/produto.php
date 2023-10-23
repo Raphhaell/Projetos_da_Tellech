@@ -216,7 +216,3 @@ include_once('../cod_conexao.php');
 		</footer>
     </body>
 </html>
-
-$produto->id
-date('d/m/Y', strtotime($produto->data))
-$produto->nome
