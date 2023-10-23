@@ -1,5 +1,6 @@
 <?php
 include_once('../cod_conexao.php');
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -20,41 +21,13 @@ include_once('../cod_conexao.php');
             <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <header>
-            <a href="../index.html" class="logo"><img src="../logo_Tellech.png" alt="logo" ></a>
-                
-                <!-- itens menu -->
-                <ul class="navmenu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="produtos.html">Produtos</a></li>
-                    <li><a href="../empresa/empresa.html">Sobre Nós</a></li>
-                </ul>
-
-                <div class="nav-icon"> <!-- Icones Menu -->
-                    <a href="#"><i class='bx bx-search'></i></a>
-                    <a href="../login/login.html"><i class='bx bx-user' id="user-icon"></i></a>
-                    <a href="#"><i class='bx bx-cart'></i></a>
-                </div> <!-- Fim Icones Menu -->
-
-                <nav class="menu-hamburguer">
-                    <input type="checkbox" class="menu-checkbox"/>
-
-                    <div class="bx bx-menu" id="menu-icon"></div>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="../FAQ/faq.html">FAQ</a></li>
-                        <li><a href="../empresa/empresa.html">Sobre Nós</a></li>
-                        <li><a href="../login/login.html">Login</a></li>
-                        <li><a href="../cadastro/cadastro_cliente.html">Cadastro</a></li>
-                        <li><a href="../cadastro/cadastro_administrador.html">Cadastro Administrador</a></li>
-                        <li><a href="../cadastro/cadastro_empresa.html">Cadastro Empresa</a></li>
-
-                        <li><a href="../usuario/perfildousuario.html">Perfil</a></li>
-                        <li><a href="../login/logout.php">Logout</a></li>
-                    </ul>
-                </nav>        
-        </header><!--Fim de header-->
+        <?php
+        if(isset($_SESSION['id'])){
+            include('./menu_logado.php');
+        }else{
+            include('./menu.html');
+        }
+        ?>
 
         <h1>Produtos Tellech</h1>
         <section class="contenedor">
@@ -177,9 +150,9 @@ include_once('../cod_conexao.php');
 				<h3>Tellech<span>Developer</span></h3>
 	
 				<p class="footer-links">
-					<a href="../index.html">Home</a>
+					<a href="../index.php">Home</a>
 					|
-					<a href="produtos.html">Produtos</a>
+					<a href="produto.php">Produtos</a>
 					|
 					<a href="../empresa/empresa.html">Sobre Nós</a>
 				</p>
