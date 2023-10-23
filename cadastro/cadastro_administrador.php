@@ -16,5 +16,5 @@
         
     mysqli_close($conexao);
 
-    header("Location: ../index.html");
+    header("Location: ../index.php");
 ?>

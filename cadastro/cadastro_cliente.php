@@ -25,5 +25,5 @@
         echo "Erro na inclusão do registro..." . mysqli_error($conexao) . "</br>";
         mysqli_close($conexao);
 
-    header("Location: ../index.html");
+    header("Location: ../index.php");
 ?>
