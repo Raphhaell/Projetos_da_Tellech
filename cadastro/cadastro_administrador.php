@@ -9,6 +9,7 @@
 
     $sql = "INSERT INTO Administrador (Nome, DataDeNascimento, CPF, Email, Senha) values('$nome', '$dataNascimento', '$cpf', '$email', '$senha')";
 
+    mysqli_set_charset($conexao, "utf8");
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado === FALSE)

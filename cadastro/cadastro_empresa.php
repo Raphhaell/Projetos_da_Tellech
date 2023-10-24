@@ -16,8 +16,9 @@
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "INSERT INTO empresa (Nome, DataDeAbertura, CNPJ, Email, Senha, Logradouro, Numero, Complemento, CEP, Bairro, Cidade, Estado, Telefone_1, Telefone_2) values('$nome', '$dataAbertura', '$cnpj', '$email', '$senha', '$logradouro', '$numero', '$complemento', '$cep', '$bairro', '$cidade', '$estado', '$telefone1', '$celular')";
+    $sql = "INSERT INTO empresa (Nome, DataDeAbertura, CNPJ, Email, Senha, Logradouro, Numero, Complemento, CEP, Bairro, Cidade, Estado, Telefone_1, Telefone_2) values('$nome', '$dataAbertura', '$cnpj', '$email', '$senha', '$logradouro', '$numero', '$complemento', '$cep', '$bairro', '$cidade', '$estado', '$celular', '$telefone1')";
 
+    mysqli_set_charset($conexao, "utf8");
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado === FALSE)

@@ -166,6 +166,7 @@ header{ /* Cabeçalho */
         width: 90%;
         height: auto;
     }
+    
     .input-group {
         flex-direction: column;
         z-index: 5;

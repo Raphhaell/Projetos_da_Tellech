@@ -17,8 +17,9 @@
     $cep = $_POST['cep'];
     $genero = $_POST['genero'];
 
-    $sql = "INSERT INTO Cliente (Nome, DataDeNascimento, CPF, Genero, Email, Senha, Logradouro, Numero, Complemento, Bairro, Cidade, Estado, CEP, Telefone_1, Telefone_2) values('$nome', '$dataNascimento', '$cpf', '$genero', '$email', '$senha', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$estado', '$cep', '$telefone1', '$celular')";
+    $sql = "INSERT INTO Cliente (Nome, DataDeNascimento, CPF, Genero, Email, Senha, Logradouro, Numero, Complemento, Bairro, Cidade, Estado, CEP, Telefone_1, Telefone_2) values('$nome', '$dataNascimento', '$cpf', '$genero', '$email', '$senha', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$estado', '$cep', '$celular', '$telefone1')";
 
+    mysqli_set_charset($conexao, "utf8");
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado === FALSE)
