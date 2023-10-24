@@ -21,7 +21,6 @@ include('../cod_conexao.php');
         <header> <!--imagem logo -->
             <a href="../index.php" class="logo"><img src="../logo_Tellech.png" alt="logo" ></a>
         </header> <!--Fim Header -->
-    
 
         <?php
             $comando = "SELECT * FROM cliente WHERE Id = {$_SESSION['id']}";
@@ -48,7 +47,6 @@ include('../cod_conexao.php');
                 $data = implode("/",array_reverse(explode("-",$dataNascimento)));
         ?>
 
-
         <section class="seccion-perfil-usuario">
             <div class="perfil-usuario-header">
                 <div class="perfil-usuario-portada">
@@ -63,7 +61,7 @@ include('../cod_conexao.php');
             
             <div class="perfil-usuario-body">
                 <div class="perfil-usuario-bio">
-                    <h3 class="titulo"><?=$nome?></h3>
+                    <h3 class="titulo"><?=utf8_encode($nome)?></h3>
                     <p class="texto"> </p>
                 </div>
 
@@ -73,27 +71,23 @@ include('../cod_conexao.php');
                         <li> <strong>E-mail:</strong> <?=$email?></li>
                         <li> <strong>Senha:</strong> <?=$senha?></li>
                         <li> <strong>CPF:</strong> <?=$cpf?></li>
-                        <li> <strong>Logradouro:</strong> <?=$logradouro?></li>
+                        <li> <strong>Logradouro:</strong> <?=utf8_encode($logradouro)?></li>
                         <li> <strong>Número:</strong> <?=$numero?></li>
-                        <li> <strong>Complemento:</strong> <?=$complemento?></li>
+                        <li> <strong>Complemento:</strong> <?=utf8_encode($complemento)?></li>
                     </ul>
                     <ul class="lista-datos">
-                        <li> <strong>Bairro:</strong> <?=$bairro?></li>
-                        <li> <strong>Cidade:</strong> <?=$cidade?></li>
-                        <li> <strong>Estado:</strong> <?=$estado?></li>
+                        <li> <strong>Bairro:</strong> <?=utf8_encode($bairro)?></li>
+                        <li> <strong>Cidade:</strong> <?=utf8_encode($cidade)?></li>
+                        <li> <strong>Estado:</strong> <?=utf8_encode($estado)?></li>
                         <li> <strong>CEP:</strong> <?=$cep?></li>
-                        <li> <strong>Gênero:</strong> <?=$genero?></li>
-                        <li> <strong>Celular:</strong> <?=$telefone2?></li>
-                        <li> <strong>Telefone Fixo:</strong> <?=$telefone1?></li>
+                        <li> <strong>Gênero:</strong> <?=utf8_encode($genero)?></li>
+                        <li> <strong>Celular:</strong> <?=$telefone1?></li>
+                        <li> <strong>Telefone Fixo:</strong> <?=$telefone2?></li>
                     </ul>
 
-
-
-                    <?php
-                    }
-                    ?>
-
-
+        <?php
+        }
+        ?>
 
                     <div>
                         <button type="button" class="botao-editar">
@@ -101,7 +95,6 @@ include('../cod_conexao.php');
                         </button>
                         <div class="espaco-em-branco"></div>
                     </div>
-                    
                 </div>
             </div>
         </section>
