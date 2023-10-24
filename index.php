@@ -35,7 +35,6 @@ session_start();
 		<!-- Link BootStrap-->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-
         <?php
         if(isset($_SESSION['id'])){
             include('./menu_logado.php');
@@ -43,7 +42,6 @@ session_start();
             include('./menu.html');
         }
         ?>
-
 
 		<!-- Seção - HomePage -->
 		<section class="main-home"> <!-- HomePage -->
@@ -101,10 +99,10 @@ session_start();
 				$enviar = mysqli_query($conexao, $comando);
 				$resultado = mysqli_fetch_all($enviar, MYSQLI_ASSOC);
 				
-					$a = 0;
+					$a = 1;
 				
 					foreach ($resultado as $produto){
-						if ($a < 2) { //estrutura if para limitar a quantidade de produtos que aparece na tela
+						if ($a <= 10) { //estrutura if para limitar a quantidade de produtos que aparece na tela
 							$codigo = $produto['IdProduto'];
 							$nome = $produto['NomeProduto'];
 							$preco = $produto['Preco'];
@@ -119,9 +117,9 @@ session_start();
 				?>
 						
 							<div class="item">
-								<span class="titulo-item"><?=$nome?></span>
+								<span class="titulo-item"><?=utf8_encode($nome)?></span>
 								<?php echo "<img src=\"data:image/jpg;base64," .  base64_encode($data)  . "\" class=\"img-item\"/>";?>
-								<span class="precio-item">R$<?=$preco?></span>
+								<span class="precio-item"><?=$preco?></span>
 								<button class="boton-item" id="ver-produto-btn">Ver produto</button>
 							</div>
 
