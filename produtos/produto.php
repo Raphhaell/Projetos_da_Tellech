@@ -47,7 +47,6 @@ session_start();
                 $nome = $produto['NomeProduto'];
                 $preco = $produto['Preco'];
 
-                $nomeMidia = $produto['NomeMidia'];
                 $midia = $produto['MidiaProduto'];
                 $imagem = imagecreatefromstring($midia);
                 ob_start();
@@ -56,71 +55,17 @@ session_start();
                 ob_end_clean();
                 
             ?>
-
-                
                     <div class="item">
-                        <span class="titulo-item"><?=$nome?></span>
+                        <span class="titulo-item"><?=utf8_encode($nome)?></span>
                         <?php echo "<img src=\"data:image/jpg;base64," .  base64_encode($data)  . "\" class=\"img-item\"/>";?>
-                        <span class="precio-item">R$<?=$preco?></span>
+                        <span class="precio-item"><?=$preco?></span>
                         <button class="boton-item">Adicionar ao carrinho</button>
                         <button class="boton-item" id="ver-produto-btn">Ver produto</button>
                     </div>
-
             <?php
             }
             ?>
 
-
-
-
-
-                <div class="item">
-                    <span class="titulo-item">Cadeira de rodas</span>
-                    <img src="../imagens/cadeirarodas.jpg" alt="" class="img-item">
-                    <span class="precio-item">R$25000,00</span>
-                    <button class="boton-item">Adicionar ao carrinho</button>
-                    <button class="boton-item" id="ver-produto-btnn">Ver produto</button>
-                </div>
-
-                <div class="item">
-                    <span class="titulo-item">Livro em braille</span>
-                    <img src="../imagens/livrobraille.png" alt="" class="img-item">
-                    <span class="precio-item">R$35000,00</span>
-                    <button class="boton-item">Adicionar ao carrinho</button>
-                    <button class="boton-item" id="ver-produto-btnnn">Ver produto</button>
-                </div>
-
-                <div class="item">
-                    <span class="titulo-item">Adaptador</span>
-                    <img src="../imagens/adaptador.png" alt="" class="img-item">
-                    <span class="precio-item">R$18000,00</span>
-                    <button class="boton-item">Adicionar ao carrinho</button>
-                    <button class="boton-item" id="ver-produto-btnnnn">Ver produto</button>
-                </div>
-
-                <div class="item">
-                    <span class="titulo-item">Garfo para auxiliar</span>
-                    <img src="../imagens/garfo.jpg" alt="" class="img-item">
-                    <span class="precio-item">R$18000,00</span>
-                    <button class="boton-item">Adicionar ao carrinho</button>
-                    <button class="boton-item" id="ver-produto-btnnnnn">Ver produto</button>
-                </div>
-
-                <div class="item">
-                    <span class="titulo-item">Aparelho Auditivo</span>
-                    <img src="../imagens/aparelhoauditivo.png" alt="" class="img-item">
-                    <span class="precio-item">R$289,90</span>
-                    <button class="boton-item">Adicionar ao carrinho</button>
-                    <button class="boton-item" id="ver-produto-btnnnnnn">Ver produto</button>
-                </div>
-
-                <div class="item">
-                    <span class="titulo-item">Fixador multiuso</span>
-                    <img src="../imagens/fixador.jpg" alt="" class="img-item">
-                    <span class="precio-item">R$32,00</span>
-                    <button class="boton-item">Adicionar ao carrinho</button>
-                    <button class="boton-item" id="ver-produto-btnnnnnnn">Ver produto</button>
-                </div>
 
             </div>
             <!-- Carrito de Compras -->
@@ -134,7 +79,7 @@ session_start();
                 <div class="carrito-total">
                     <div class="fila">
                         <strong>Total a pagar</strong>
-                        <span class="carrito-precio-total">R$120.000,00</span>
+                        <span class="carrito-precio-total"></span>
                     </div>
                     <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
                 </div>

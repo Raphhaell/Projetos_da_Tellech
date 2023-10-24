@@ -1,4 +1,4 @@
-        <?php
+<?php
 		include('../protect.php');
 		?>
 		
@@ -29,7 +29,7 @@
 					<!--<li><a href="forum/forum.html">Fórum</a></li>-->
 					<li><a href="../empresa/empresa.html">Sobre Nós</a></li>
 
-					<li><a href="../usuario/perfil_do_usuario.php"><?=$_SESSION['nome']; ?></a></li>
+					<li><a href="../usuario/perfil_do_usuario.php"><?=utf8_encode($_SESSION['nome']); ?></a></li>
 					<li><a href="../login/logout.php">Logout</a></li>
 				</ul>
 			</nav>
