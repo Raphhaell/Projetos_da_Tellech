@@ -14,7 +14,9 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
         //faz a consulta. Se der errado, vai mostrar o erro (die)
-        $sql_code = "SELECT * FROM Cliente WHERE email = '$email' AND senha = '$senha'";
+        $sql_code = "SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'";
+        $sql_code = "SELECT * FROM administrador WHERE email = '$email' AND senha = '$senha'";
+        $sql_code = "SELECT * FROM empresa WHERE email = '$email' AND senha = '$senha'";
         $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
         
         //se existir o usuário e a senha, vai retornar 1 registro

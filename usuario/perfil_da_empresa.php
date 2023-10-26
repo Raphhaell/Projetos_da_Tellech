@@ -23,15 +23,14 @@ include('../cod_conexao.php');
         </header> <!--Fim Header -->
 
         <?php
-            $comando = "SELECT * FROM cliente WHERE Id = {$_SESSION['id']}";
+            $comando = "SELECT * FROM empresa WHERE Id = {$_SESSION['id']}";
             $enviar = mysqli_query($conexao, $comando);
             $resultado = mysqli_fetch_all($enviar, MYSQLI_ASSOC);
 
             foreach ($resultado as $usuario){
                 $nome = $usuario['Nome'];
-                $dataNascimento = $usuario['DataDeNascimento'];
-                $cpf = $usuario['CPF'];
-                $genero = $usuario['Genero'];
+                $dataAbertura = $usuario['DataDeAbertura'];
+                $cnpj = $usuario['CNPJ'];
                 $email = $usuario['Email'];
                 $senha = $usuario['Senha'];
                 $logradouro = $usuario['Logradouro'];
@@ -44,7 +43,7 @@ include('../cod_conexao.php');
                 $telefone1 = $usuario['Telefone_1'];
                 $telefone2 = $usuario['Telefone_2'];
 
-                $dataDeNascimento = implode("/",array_reverse(explode("-",$dataNascimento)));
+                $dataDeAbertura = implode("/",array_reverse(explode("-",$dataAbertura)));
 
                 $midia = $usuario['Foto'];
 				$imagem = imagecreatefromstring($midia);
@@ -74,10 +73,10 @@ include('../cod_conexao.php');
 
                 <div class="perfil-usuario-footer">
                     <ul class="lista-datos">
-                        <li> <strong>Data de Nascimento:</strong> <?=$dataDeNascimento?></li>
+                        <li> <strong>Data de Nascimento:</strong> <?=$dataDeAbertura?></li>
                         <li> <strong>E-mail:</strong> <?=$email?></li>
                         <li> <strong>Senha:</strong> <?=$senha?></li>
-                        <li> <strong>CPF:</strong> <?=$cpf?></li>
+                        <li> <strong>CPF:</strong> <?=$cnpj?></li>
                         <li> <strong>Logradouro:</strong> <?=utf8_encode($logradouro)?></li>
                         <li> <strong>Número:</strong> <?=$numero?></li>
                         <li> <strong>Complemento:</strong> <?=utf8_encode($complemento)?></li>
@@ -87,7 +86,6 @@ include('../cod_conexao.php');
                         <li> <strong>Cidade:</strong> <?=utf8_encode($cidade)?></li>
                         <li> <strong>Estado:</strong> <?=utf8_encode($estado)?></li>
                         <li> <strong>CEP:</strong> <?=$cep?></li>
-                        <li> <strong>Gênero:</strong> <?=utf8_encode($genero)?></li>
                         <li> <strong>Celular:</strong> <?=$telefone1?></li>
                         <li> <strong>Telefone Fixo:</strong> <?=$telefone2?></li>
                     </ul>

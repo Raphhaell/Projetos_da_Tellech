@@ -23,7 +23,7 @@ include('../cod_conexao.php');
         </header> <!--Fim Header -->
 
         <?php
-            $comando = "SELECT * FROM cliente WHERE Id = {$_SESSION['id']}";
+            $comando = "SELECT * FROM administrador WHERE Id = {$_SESSION['id']}";
             $enviar = mysqli_query($conexao, $comando);
             $resultado = mysqli_fetch_all($enviar, MYSQLI_ASSOC);
 
@@ -31,18 +31,8 @@ include('../cod_conexao.php');
                 $nome = $usuario['Nome'];
                 $dataNascimento = $usuario['DataDeNascimento'];
                 $cpf = $usuario['CPF'];
-                $genero = $usuario['Genero'];
                 $email = $usuario['Email'];
                 $senha = $usuario['Senha'];
-                $logradouro = $usuario['Logradouro'];
-                $numero = $usuario['Numero'];
-                $complemento = $usuario['Complemento'];
-                $cep = $usuario['CEP'];
-                $bairro = $usuario['Bairro'];
-                $cidade = $usuario['Cidade'];
-                $estado = $usuario['Estado'];
-                $telefone1 = $usuario['Telefone_1'];
-                $telefone2 = $usuario['Telefone_2'];
 
                 $dataDeNascimento = implode("/",array_reverse(explode("-",$dataNascimento)));
 
@@ -78,18 +68,9 @@ include('../cod_conexao.php');
                         <li> <strong>E-mail:</strong> <?=$email?></li>
                         <li> <strong>Senha:</strong> <?=$senha?></li>
                         <li> <strong>CPF:</strong> <?=$cpf?></li>
-                        <li> <strong>Logradouro:</strong> <?=utf8_encode($logradouro)?></li>
-                        <li> <strong>Número:</strong> <?=$numero?></li>
-                        <li> <strong>Complemento:</strong> <?=utf8_encode($complemento)?></li>
                     </ul>
                     <ul class="lista-datos">
-                        <li> <strong>Bairro:</strong> <?=utf8_encode($bairro)?></li>
-                        <li> <strong>Cidade:</strong> <?=utf8_encode($cidade)?></li>
-                        <li> <strong>Estado:</strong> <?=utf8_encode($estado)?></li>
-                        <li> <strong>CEP:</strong> <?=$cep?></li>
-                        <li> <strong>Gênero:</strong> <?=utf8_encode($genero)?></li>
-                        <li> <strong>Celular:</strong> <?=$telefone1?></li>
-                        <li> <strong>Telefone Fixo:</strong> <?=$telefone2?></li>
+                        
                     </ul>
 
         <?php
