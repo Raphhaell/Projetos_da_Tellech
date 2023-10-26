@@ -23,7 +23,7 @@
             </div>
 
             <div class="form">
-                <form action="./cadastro_empresa.php" method="post">
+                <form action="./cadastro_empresa.php" method="post" enctype="multipart/form-data">
                     <div class="form-header">
                         <div class="title">
                             <h1 style="margin-top: -1rem;">Cadastre-se sua Empresa</h1>
@@ -102,11 +102,17 @@
                             <label for="senha">Senha</label>
                             <input id="senha" type="password" name="senha" placeholder="Digite a senha" required>
                         </div>
-                        <!-- Adicione os outros campos de forma similar -->
-
-                    <div class="continue-button">
-                        <button class="btn-cadastrar">Cadastrar</button>
-                    </div>
+                        
+                        <div class="upload-imagem">
+                            <div class="input-box">
+                                <label for="foto">Foto</label>
+                                <input type="file" name="foto" id="foto" accept="image/*" required>
+                            </div>
+                        </div>
+                        
+                        <div class="continue-button">
+                            <button class="btn-cadastrar">Cadastrar</button>
+                        </div>
                 </form>
             </div>
         </div>

@@ -22,7 +22,7 @@
             </div>
 
             <div class="form">
-                <form action="cadastro_administrador.php" method="post">
+                <form action="cadastro_administrador.php" method="post" enctype="multipart/form-data">
                     <div class="form-header">
                         <div class="title">
                             <h1 style="margin-top: -1rem;">Cadastre-se com Tellech</h1>
@@ -53,6 +53,11 @@
                         <div class="input-box">
                             <label for="datadenascimento">Data de nascimento</label>
                             <input id="datadenascimento" type="text" name="datadenascimento" placeholder="xxxx/xx/xx" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="foto">Foto</label>
+                            <input type="file" name="foto" id="foto" accept="image/*" required>
                         </div>
                     </div>
 
