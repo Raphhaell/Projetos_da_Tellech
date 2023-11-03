@@ -115,11 +115,6 @@ header{ /* Cabeçalho */
     margin-bottom: 0.5rem;
 }
 
-.seccion-perfil-usuario .perfil-usuario-body .texto{
-    color: #848484;
-    font-size: 0.95em;
-}
-
 .seccion-perfil-usuario .perfil-usuario-footer, .seccion-perfil-usuario .perfil-usuario-bio{
     display: flex;
     padding: 1.5rem 2rem;
@@ -141,12 +136,6 @@ header{ /* Cabeçalho */
 
 .seccion-perfil-usuario .lista-datos li{
     padding: 5px 0;
-}
-
-.seccion-perfil-usuario .lista-datos li>.icono{
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    vertical-align: middle;
 }
 
 .boton-avatar{
@@ -174,6 +163,187 @@ header{ /* Cabeçalho */
     color: #000000;
 }
 
+
+
+
+/*-------------------------------------------Formulário---------------------------------------------*/
+
+
+.seccion-perfil-usuario-editar .perfil-usuario-body, .seccion-perfil-usuario-editar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.seccion-perfil-usuario-editar .perfil-usuario-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#006494, transparent);
+    margin-bottom: 1.25rem;
+}
+
+.seccion-perfil-usuario-editar .perfil-usuario-portada{
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 17rem;
+    background-image: linear-gradient(45deg, #006494, #dcecff);
+    border-radius: 0 0 20px 20px;
+}
+
+.seccion-perfil-usuario-editar .perfil-usuario-avatar{
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid #FFFFFF;
+    background-color: #DFE5F2;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 90px);
+    z-index: 1;
+}
+
+.seccion-perfil-usuario-editar .perfil-usuario-avatar img{
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.seccion-perfil-usuario-editar .perfil-usuario-avatar .boton-avatar{
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border: 0;
+    background-color: #fff;
+    box-shadow: 0 0 12px #00000033;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.seccion-perfil-usuario-editar .perfil-usuario-body{
+    width: 70%;
+    position: relative;
+    max-width: 750px;
+}
+
+.seccion-perfil-usuario-editar .perfil-usuario-body .titulo{
+    display: block;
+    width: 100%;
+    font-size: 1.75em;
+    margin-bottom: 0.5rem;
+}
+
+.seccion-perfil-usuario-editar .perfil-usuario-footer, .seccion-perfil-usuario-editar .perfil-usuario-bio{
+    display: flex;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.seccion-perfil-usuario-editar .perfil-usuario-bio{
+    margin-bottom: 1.25rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-perfil-usuario-editar .perfil-usuario-bio .input-box input{
+    width: fit-content;
+}
+
+.seccion-perfil-usuario-editar .lista-datos{
+    width: 50%;
+    list-style: none;
+}
+
+.seccion-perfil-usuario-editar .lista-datos li{
+    padding: 5px 0;
+}
+
+.seccion-perfil-usuario-editar{
+    display: none;
+}
+
+
+
+
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+    width: 48%;
+}
+
+.input-box input {
+    margin: 0.7rem 0;
+    padding: 1.5rem 2rem;
+    height: 30%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 1.4rem;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #006494;
+}
+
+.input-box label{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+
+.salvar-button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.salvar-button button {
+    font-size: 20px;
+    width: 40%;
+    background-color: #ffffff;
+    padding: 0.62rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 1s;
+    border: solid 1px #006494;
+    color: #216c8f;
+    font-weight: 550;
+}
+
+.salvar-button button:hover {
+    color: #ffffff;
+    background: #007cb9;
+}
+
+
 /* adactacion a dispositivos */
 @media (max-width: 750px) {
     .seccion-perfil-usuario .lista-datos{
@@ -183,5 +353,9 @@ header{ /* Cabeçalho */
     .seccion-perfil-usuario .perfil-usuario-portada,
     .seccion-perfil-usuario .perfil-usuario-body {
         width: 95%;
+    }
+
+    .input-box {
+        width: 100%;
     }
 }
