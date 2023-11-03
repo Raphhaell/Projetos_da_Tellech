@@ -40,8 +40,6 @@ session_start();
             $enviar = mysqli_query($conexao, $comando);
             $resultado = mysqli_fetch_all($enviar, MYSQLI_ASSOC);
 
-            
-            
             foreach ($resultado as $produto){
                 $codigo = $produto['IdProduto'];
                 $nome = $produto['NomeProduto'];
@@ -59,7 +57,11 @@ session_start();
                         <span class="titulo-item"><?=utf8_encode($nome)?></span>
                         <?php echo "<img src=\"data:image/jpg;base64," .  base64_encode($data)  . "\" class=\"img-item\"/>";?>
                         <span class="precio-item"><?=$preco?></span>
-                        <button class="boton-item">Adicionar ao carrinho</button>
+                        <form class="carrinho" method="POST" action="../carrinho/gerenciar_carrinho.php">
+                            <input type="hidden" name="produto_id" value="<?=$codigo?>">
+                            <input type="hidden" name="quantidade" value="1">
+                            <button class="boton-item" type="submit">Adicionar ao carrinho</button>
+                        </form>
                         <button class="boton-item" id="ver-produto-btn">Ver produto</button>
                     </div>
             <?php
@@ -81,7 +83,11 @@ session_start();
                         <strong>Total a pagar</strong>
                         <span class="carrito-precio-total"></span>
                     </div>
-                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+                    <form method="POST" action="../carrinho/gerenciar_carrinho.php">
+                            <input type="hidden" name="produto_id" value="<?=$codigo?>">
+                            <input type="hidden" name="quantidade" value="1">
+                            <button class="btn-pagar" type="submit">Adicionar ao carrinho <i class="fa-solid fa-bag-shopping"></i></button>
+                    </form>
                 </div>
             </div>
         </section>
