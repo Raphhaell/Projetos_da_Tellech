@@ -32,7 +32,8 @@
 			<li><a href="usuario/perfil_do_usuario.php"><?=utf8_encode($_SESSION['nome']); ?></a></li>
 			<li><a href="usuario/perfil_do_adm.php"><?=utf8_encode($_SESSION['nome']); ?></a></li>
 			<li><a href="usuario/perfil_da_empresa.php"><?=utf8_encode($_SESSION['nome']); ?></a></li>
-					
+			
+			<li><a href="carrinho/carrinho.php">Carrinho</a></li>
 			<li><a href="login/logout.php">Logout</a></li>
 		</ul>
 	</nav>
