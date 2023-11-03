@@ -54,7 +54,7 @@ $query = mysqli_query($conexao, "SELECT NomeCategoria FROM categoria");
 
         <div class="form-control">
           <label for="image">Imagem do Produto</label>
-          <input type="file" name="imagem" id="image" accept="image/*" required/>
+          <input type="file" name="imagem" id="image" accept="image/*" multiple="multiple" required/>
         </div>
 
         <div class="form-control">
