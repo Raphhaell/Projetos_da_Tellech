@@ -19,6 +19,7 @@ if (isset($_SESSION['carrinho'])) {
     unset($_SESSION['carrinho']);
 }
 
-header('Location: ../index.php');
+//header('Location: ../index.php');
+header('Location: analise.php?formaPagamento=' . urlencode($formaDePagamento));
 
 ?>

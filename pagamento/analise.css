@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #006494; /* Cor de fundo fora da borda */
+}
+ 
+.outer-container {
+    background: #FFF; /* Cor de fundo da borda */
+    border: 5px solid #FFF; /* Borda branca */
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 10px;
+}
+ 
+.inner-container {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Cabin', sans-serif;
+}
+ 
+.inner-container p {
+    font-size: 30px;
+    color: #333;
+    margin: 10px 0;
+}
+ 
+.chosen-payment-method {
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 15px 60px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #02415e;
+    border-radius: 10px;
+    transition: all 0.55s ease;
+    color: #fff;
+    background-color: #006494;
+    cursor: pointer;
+  }
+ 
+  .btn:hover {
+    background-color: #007cb9;
+    border: 2px solid #007cb9;
+  }
