@@ -14,35 +14,47 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
         //faz a consulta. Se der errado, vai mostrar o erro (die)
-        $sql_code = "SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'";
-        //$sql_code = "SELECT * FROM administrador WHERE email = '$email' AND senha = '$senha'";
-        //$sql_code = "SELECT * FROM empresa WHERE email = '$email' AND senha = '$senha'";
-        $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
+        $sql_cliente = "SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'";
+        $sql_admin = "SELECT * FROM administrador WHERE email = '$email' AND senha = '$senha'";
+        $sql_empresa = "SELECT * FROM empresa WHERE email = '$email' AND senha = '$senha'";
+        
+        $query_cliente = $conexao->query($sql_cliente) or die("Falha na execução do código SQL: " . $conexao->error);
+        $query_admin = $conexao->query($sql_admin) or die("Falha na execução do código SQL: " . $conexao->error);
+        $query_empresa = $conexao->query($sql_empresa) or die("Falha na execução do código SQL: " . $conexao->error);
         
         //se existir o usuário e a senha, vai retornar 1 registro
+        $quantidade_cliente = $query_cliente->num_rows;
+        $quantidade_admin = $query_admin->num_rows;
+        $quantidade_empresa = $query_empresa->num_rows;
 
-        $quantidade = $sql_query->num_rows;
-
-        if ($quantidade == 1) {
-
+        if ($quantidade_cliente == 1) {
             //vai pegar os dados do banco de dados e jogar na variável
-            $usuario = $sql_query->fetch_assoc();
-
-            //se não existir a sessão, vai criar uma
-            if (!isset($_SESSION)) {
-                session_start();
-            }
-
-            //vai jogar na sessão o id e nome do usuário
-            $_SESSION['id'] = $usuario['Id'];
-            $_SESSION['nome'] = $usuario['Nome'];
-
-            header("Location: ../index.php");
-
-        } else {
+            $usuario = $query_cliente->fetch_assoc();
+            iniciarSessao($usuario['Id'], $usuario['Nome']);
+        } elseif ($quantidade_admin == 1) {
+            $usuario = $query_admin->fetch_assoc();
+            iniciarSessao($usuario['IdAdministrador'], $usuario['Nome']);
+        } elseif ($quantidade_empresa == 1){
+            $usuario = $query_empresa->fetch_assoc();
+            iniciarSessao($usuario['IdEmpresa'], $usuario['Nome']);
+        } else{
             echo "Falha ao logar! E-mail ou senha incorretos.";
         }
     }
+}
+
+function iniciarSessao($id, $nome){
+    //se não existir a sessão, vai criar uma
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+
+    //vai jogar na sessão o id e nome do usuário
+    $_SESSION['id'] = $id;
+    $_SESSION['nome'] = $nome;
+
+    header("Location: ../index.php");
+
 }
 
 ?>
