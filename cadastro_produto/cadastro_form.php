@@ -37,7 +37,7 @@
         $conteudo = addslashes($conteudo);
         fclose($fp);
 
-        $sql = "INSERT INTO produto (NomeProduto, Descricao, QntEstoque, Preco, MidiaProduto, IdCategoria, Id) values('$nome', '$descricao', '$estoque', '$preco', '$conteudo', '$idCategoria', '$empresa')";
+        $sql = "INSERT INTO produto (NomeProduto, Descricao, QntEstoque, Preco, MidiaProduto, IdCategoria, IdEmpresa) values('$nome', '$descricao', '$estoque', '$preco', '$conteudo', '$idCategoria', '$empresa')";
         $resultado = mysqli_query($conexao, $sql);
 
         if ($resultado === FALSE) {
