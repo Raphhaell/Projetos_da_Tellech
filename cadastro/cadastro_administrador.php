@@ -30,7 +30,7 @@
         }
             
         mysqli_close($conexao);
-        //header("Location: ../index.php");
+        header("Location: ../index.php");
 
     } else {
         echo "Não foi possível carregar a imagem";
