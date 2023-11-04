@@ -1,5 +1,6 @@
 <?php
 include_once("./cod_conexao.php");
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ include_once("./cod_conexao.php");
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rede Social Tellech</title>
+    <title>Fórum Tellech</title>
 
     <link rel="stylesheet" href="forum.css">
 </head>
@@ -22,7 +23,7 @@ include_once("./cod_conexao.php");
         <div class="newPost">
             <div class="infoUser">
                 <div class="imgUser"></div>
-                <strong>Nome do Usuário</strong>
+                <strong><?=$_SESSION['nome']?></strong>
             </div>
 
             <!-- Formulário para fazer post-->
@@ -55,7 +56,10 @@ include_once("./cod_conexao.php");
                 $tituloPostagem = $postagem['TituloPostagem'];
                 $conteudoPublicacao = $postagem['ConteudoPublicacao'];
                 $dataPublicacao = $postagem['DataPublicacao'];
-                $dataDaPublicacao = implode("/",array_reverse(explode("-",$dataPublicacao)));
+                date_default_timezone_set('America/Sao_Paulo'); // Substitua 'America/Sao_Paulo' pelo fuso horário correto
+                $dataDaPublicacao = date('d/m/Y H:i:s', strtotime($dataPublicacao));
+
+
                 $imagemData = $postagem['MidiaPostagem'];
                 $curtida = $postagem['Curtidas'];
                 $Id = $postagem['IdPublicacao'];
@@ -94,8 +98,7 @@ include_once("./cod_conexao.php");
                     <!-- Lida com a exclusão do Post  -->
                     <form action="excluir.php" method="POST">
                         <input type="hidden" name="id_publicacao" value="<?= $postagem['IdPublicacao'] ?>">
-                        <button type="submit" class="filesPost delete">
-                            <img src="icones/menu.svg" alt="Excluir" width="25px"> Excluir Post
+                        <button type="submit" class="filesPost delete" alt="Excluir" width="25px"> Excluir Post
                         </button>
                     </form>
                 </div>
