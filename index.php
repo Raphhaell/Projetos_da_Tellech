@@ -95,7 +95,7 @@ session_start();
             <div class="contenedor-items">
 
 				<?php
-				$comando = "SELECT * FROM produto ORDER BY id DESC";
+				$comando = "SELECT * FROM produto ORDER BY idProduto DESC";
 				$enviar = mysqli_query($conexao, $comando);
 				$resultado = mysqli_fetch_all($enviar, MYSQLI_ASSOC);
 				
