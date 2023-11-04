@@ -4,6 +4,10 @@ session_start();
 include('../protect.php');
 include('../cod_conexao.php');
 
+if ($_SESSION['tipo'] === 'admin') {
+    // Conteúdo específico para o tipo de usuário administrador
+
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +27,7 @@ include('../cod_conexao.php');
         </header> <!--Fim Header -->
 
         <?php
-            $comando = "SELECT * FROM administrador WHERE Id = {$_SESSION['id']}";
+            $comando = "SELECT * FROM administrador WHERE IdAdministrador = {$_SESSION['id']}";
             $enviar = mysqli_query($conexao, $comando);
             $resultado = mysqli_fetch_all($enviar, MYSQLI_ASSOC);
 
@@ -88,3 +92,9 @@ include('../cod_conexao.php');
         </section>
     </body>
 </html>
+
+<?php
+} else {
+    header("Location: perfil_do_usuario.php"); // Redirecione para a página do cliente se o tipo não for admin
+}
+?>

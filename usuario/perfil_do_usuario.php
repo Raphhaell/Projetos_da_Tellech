@@ -4,6 +4,11 @@ session_start();
 include('../protect.php');
 include('../cod_conexao.php');
 
+if ($_SESSION['tipo'] === 'cliente') {
+    // Conteúdo específico para o tipo de usuário cliente
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +33,8 @@ include('../cod_conexao.php');
         </header> <!--Fim Header -->
 
         <?php
+        
+
             $comando = "SELECT * FROM cliente WHERE Id = {$_SESSION['id']}";
             $enviar = mysqli_query($conexao, $comando);
             $resultado = mysqli_fetch_all($enviar, MYSQLI_ASSOC);
@@ -240,3 +247,11 @@ include('../cod_conexao.php');
             </script>
     </body>
 </html>
+
+<?php
+} elseif ($_SESSION['tipo'] === 'admin') {
+    header("Location: perfil_do_adm.php"); // Redirecione para a página do admin
+} elseif ($_SESSION['tipo'] === 'empresa') {
+    header("Location: perfil_da_empresa.php"); // Redirecione para a página da empresa
+}
+?>

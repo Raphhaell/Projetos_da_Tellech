@@ -4,6 +4,9 @@ session_start();
 include('../protect.php');
 include('../cod_conexao.php');
 
+if ($_SESSION['tipo'] === 'empresa') {
+    // Conteúdo específico para o tipo de usuário empresa
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +26,7 @@ include('../cod_conexao.php');
         </header> <!--Fim Header -->
 
         <?php
-            $comando = "SELECT * FROM empresa WHERE Id = {$_SESSION['id']}";
+            $comando = "SELECT * FROM empresa WHERE IdEmpresa = {$_SESSION['id']}";
             $enviar = mysqli_query($conexao, $comando);
             $resultado = mysqli_fetch_all($enviar, MYSQLI_ASSOC);
 
@@ -105,3 +108,9 @@ include('../cod_conexao.php');
         </section>
     </body>
 </html>
+
+<?php
+} else {
+    header("Location: perfil_do_usuario.php"); // Redirecione para a página do cliente se o tipo não for empresa
+}
+?>

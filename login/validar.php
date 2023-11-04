@@ -30,20 +30,20 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
         if ($quantidade_cliente == 1) {
             //vai pegar os dados do banco de dados e jogar na variável
             $usuario = $query_cliente->fetch_assoc();
-            iniciarSessao($usuario['Id'], $usuario['Nome']);
+            iniciarSessao($usuario['Id'], $usuario['Nome'], "cliente");
         } elseif ($quantidade_admin == 1) {
             $usuario = $query_admin->fetch_assoc();
-            iniciarSessao($usuario['IdAdministrador'], $usuario['Nome']);
+            iniciarSessao($usuario['IdAdministrador'], $usuario['Nome'], "admin");
         } elseif ($quantidade_empresa == 1){
             $usuario = $query_empresa->fetch_assoc();
-            iniciarSessao($usuario['IdEmpresa'], $usuario['Nome']);
+            iniciarSessao($usuario['IdEmpresa'], $usuario['Nome'], "empresa");
         } else{
             echo "Falha ao logar! E-mail ou senha incorretos.";
         }
     }
 }
 
-function iniciarSessao($id, $nome){
+function iniciarSessao($id, $nome, $tipo){
     //se não existir a sessão, vai criar uma
     if (!isset($_SESSION)) {
         session_start();
@@ -52,6 +52,7 @@ function iniciarSessao($id, $nome){
     //vai jogar na sessão o id e nome do usuário
     $_SESSION['id'] = $id;
     $_SESSION['nome'] = $nome;
+    $_SESSION['tipo'] = $tipo; //Adiciona o tipo de usuário à sessão
 
     header("Location: ../index.php");
 
