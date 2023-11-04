@@ -25,7 +25,7 @@
 		<ul>
 			<li><a href="../index.php">Home</a></li>
 			<li><a href="produto.php">Produtos</a></li>
-			<!--<li><a href="forum/forum.html">Fórum</a></li>-->
+			<li><a href="../forum/forum.php">Fórum</a></li>
 			<li><a href="../empresa/empresa.html">Sobre Nós</a></li>
 
 			<li><a href="../usuario/perfil_do_usuario.php"><?=utf8_encode($_SESSION['nome']); ?></a></li>

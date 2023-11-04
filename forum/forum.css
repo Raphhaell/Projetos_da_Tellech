@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fbfbfb;
+    font-family: 'Cabin', sans-serif;
+    -webkit-font-smoothing: antialiased !important; /* melhora a qualidade das fontes */
+}
+li{
+    list-style-type: none;
+}
+header{
+    width: 100%;
+    height: 80px;
+
+    background: #006494;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.4);
+}
+.main{
+    max-width: 900px;
+    margin: 0 auto;
+}
+div.newPost{
+    width: 100%;
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px 0;
+    padding: 25px;
+
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+}
+div.newPost div.infoUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.newPost div.infoUser div.imgUser{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #333;
+}
+div.newPost div.infoUser strong{
+    font-size: 16px;
+    margin-left: 10px;
+    color: #006494;
+}
+div.newPost form.formPost{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+input[type="textarea"]{
+    height: 90px;
+    background: #FBFBFB;
+    margin: 15px 0;
+    padding: 25px;
+    border-radius: 10px;
+    resize: none;
+    /*outline: none; */
+    border: 0;
+
+    font-weight: bold;
+    font-family: 'Cabin', sans-serif;
+    color: #727272;
+    border: 2px solid #FFF;
+}
+div.newPost form.formPost textarea:focus{
+    border:2px solid #23a0ff;
+  
+  }
+
+#titulopost{
+    height: 20px;
+    background: #FBFBFB;
+}
+
+div.newPost form.formPost div.iconsAndButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.newPost form.formPost div.iconsAndButton div.icons{
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+button.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    outline: none;
+    margin-right: 15px;
+    border: 0;
+    background: none;
+
+    cursor: pointer;
+
+} 
+button.btnSubmitForm{
+    background: #006494;
+    padding: 10px 15px;
+	color: white;
+    font-weight: bold;
+    outline: none;
+	cursor: pointer;
+	
+    border: none;
+    border-radius: 10px;
+    transition: background 0.4s;
+}
+button.btnSubmitForm:hover{
+    background: #007cb9;
+}
+
+#Dados {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Estilos para entrada de dados */
+input[type="text"] {
+    width: 100%;
+    height: 90px;
+    margin: 5px 0;
+    padding: 25px;
+    border-radius: 10px;
+    resize: none;
+    border: 0;
+    outline: none; 
+    background: #dddfe0;
+    
+    font-weight: bold;
+    font-family: 'Cabin', sans-serif;
+    color: #727272;
+    border: 2px solid #FFF;
+}
+
+
+ul.posts li.post{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #FFF;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.05);
+}
+li.post >p{
+    width: 100%;
+    margin: 15px 0;
+    font-weight: bold;
+    color: #727272;
+}
+div.infoUserPost {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+div.imgUserPost{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #333;
+}
+
+div.nameAndHour {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+div.nameAndHour >strong{
+    color: #007cb9;
+}
+div.nameAndHour >p{
+    color: #d1d1d1;
+    font-size: 16px;
+}
+
+div.actionBtnPost{
+    display: flex;
+    align-items: center;
+
+}
+button.filesPost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 20px;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px;
+
+    background: #006494;    
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;         
+    
+    transition: background 0.2s;             
+}
+button.filesPost:hover{
+    background: #02415e;
+}
+button.filesPost img{
+    margin-right: 5px;
+}
+
+/* Estilize o botão "Curtir" quando clicado */
+.like.clicked {
+    background-color: #fc4b4b; /* ou a cor que você preferir */
+    color: white; /* Define a cor do texto para garantir que seja visível */
+}
+/* Botão publicar do comentario: */
+button#btncoment{
+    float: right;
+}
+input.image{
+background-image: url(icones/img.svg);
+}
+.ImagePost{
+    width: 400px;
+    height: 300px;
+}
+.delete{
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#file-name{
+    padding: 10px;
+}
