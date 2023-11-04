@@ -62,7 +62,10 @@ session_start();
                             <input type="hidden" name="quantidade" value="1">
                             <button class="boton-item" type="submit">Adicionar ao carrinho</button>
                         </form>
-                        <button class="boton-item" id="ver-produto-btn">Ver produto</button>
+                        <form class="carrinho" method="post" action="../produto_especifico/produto.php">
+                            <input type="hidden" name="produto_id" value="<?=$codigo?>">
+                            <button class="boton-item" type="submit" id="ver-produto-btn">Ver produto</button>
+                        </form>
                     </div>
             <?php
             }
@@ -70,13 +73,15 @@ session_start();
 
 
             </div>
-            <!-- Carrito de Compras -->
+
+            
+            <!-- Carrito de Compras 
             <div class="carrito" id="carrito">
                 <div class="header-carrito">
                     <h2>Seu carrinho</h2>
                 </div>
                 <div class="carrito-items">
-                    <!-- Conteúdo do carrinho aqui -->
+                    
                 </div>
                 <div class="carrito-total">
                     <div class="fila">
@@ -84,12 +89,12 @@ session_start();
                         <span class="carrito-precio-total"></span>
                     </div>
                     <form method="POST" action="../carrinho/gerenciar_carrinho.php">
-                            <input type="hidden" name="produto_id" value="<?=$codigo?>">
+                            <input type="hidden" name="produto_id" value="<//?=$codigo?>">
                             <input type="hidden" name="quantidade" value="1">
                             <button class="btn-pagar" type="submit">Adicionar ao carrinho <i class="fa-solid fa-bag-shopping"></i></button>
                     </form>
                 </div>
-            </div>
+            </div>-->
         </section>
 
         <!-- Rodapé-->

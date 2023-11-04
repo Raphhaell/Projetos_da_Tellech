@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+ /* --bg-color: #1d2631; /* Adicione a cor de fundo */
+  --main-color: #34e7f8;
+  --other-color: #fff;
+  --tex-color: #000;
+  --h1-font: 4rem;
+  --p-font: 1rem;
+}
+
+body {
+  background-color: var(--bg-color); /* Use a cor de fundo definida no root */
+  color: var(--tex-color);
+}
+
+header{ /* Cabeçalho */
+	position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10%;
+    background-color: #006494;
+}
+
+.logo img{ /*imagem logo*/
+	max-width: 70px;
+	height: auto;
+	transition: all .42s ease;
+}
+
+.logo img:hover{
+	transform: scale(1.1);
+}
+
+.navmenu{ /* menu */
+	display: flex;
+}
+
+.navmenu li{
+	position: relative;
+  list-style: none;
+}
+
+.navmenu a{
+	display: block;
+	color: #FFF;
+	font-size: 23px;
+	text-transform: capitalize;
+	padding: 10px 20px;
+	font-weight: 400;
+	text-decoration: none;
+	transition: all .42s ease;
+}
+
+.navmenu a:hover{ /* Passamos o mouse sobre os itens do menu e a cor muda.*/
+	transform: scale(1.1);
+	color: #B9D2DE;
+
+	/*-moz-box-shadow:0 3px 10px 0 #CCC;
+	-webkit-box-shadow:0 3px 10px 0 #ccc;
+	text-shadow:0px 0px 5px #fff;*/
+}
+
+.nav-icon{ /* icones */
+	display: flex;
+	align-items: center;
+}
+
+.nav-icon i{ /*Icones - pesquisa, login e carrinho */
+	z-index: 999;
+	margin-right: 20px;
+	color: #FFF;
+	font-size: 28px;
+	font-weight: 400;
+	transition: all .42s ease; 
+}
+
+.nav-icon i:hover{
+	transform: scale(1.1);
+	color: #B9D2DE;
+}
+
+/*Menu lateral*/
+.menu-checkbox{
+	position: absolute;
+	z-index: 1000;
+	width: 35px;
+	height: 35px;
+	opacity: 0; /*está na tela, mas é transparente*/
+	cursor: pointer;
+}
+
+.menu-checkbox:hover ~ #menu-icon{ /*quando passar o mouse no checkbox, o elemento que está no mesmo nível (três traços) vai fazer:*/
+	transition: all .42s ease;
+	transform: scale(1.1);
+	color: #B9D2DE;
+}
+
+.menu-checkbox:checked ~ ul{ /*quando selecionar o checkbox, o elemento ul*/
+	margin-right: 0;
+}
+
+#menu-icon{ /* icone menu */
+	font-size: 35px;
+	color: #FFF;
+	z-index: 999;
+}
+
+.menu-hamburguer ul{
+	position: absolute;
+	z-index: 998;
+	right: 0;
+	top: 8.5vh;
+	width: 300px;
+	height: 100vh;
+	background-color: #006494;
+	margin-right: -300px;
+	transition: all ease .42s;
+}
+
+.menu-hamburguer li{
+	padding: 10px 30px;
+  list-style: none;
+}
+
+.menu-hamburguer a{
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 23px;
+	transition: all .42s ease;
+}
+
+.menu-hamburguer a:hover{
+	color: #B9D2DE;
+}
+/*Fim do menu lateral*/
+/*Fim do cabeçalho*/
+ 
+  .section {
+    padding: 0 15%;
+  }
+ 
+  .home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+  }
+ 
+  .home-text h1 {
+    font-size: var(--h1-font);
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+ 
+  .home-text h5 {
+    color: var(--tex-color); /* Corrigido para a cor de texto definida */
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+ 
+  .home-text h3 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+  }
+ 
+  .home-img img {
+    max-width: 100%;
+    width: 28rem;
+    height: auto;
+    margin-left: 25%;
+  }
+ 
+  .btn {
+    display: inline-block;
+    padding: 15px 60px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #02415e;
+    border-radius: 10px;
+    transition: all 0.55s ease;
+    color: #fff;
+    background-color: #006494;
+    cursor: pointer;
+  }
+ 
+  .btn:hover {
+    background-color: #007cb9;
+    border: 2px solid #007cb9;
+  }
+ 
+  .product-description {
+    margin-top: 20px; /* Adicione um espaço entre a descrição e a avaliação */
+  }
+ 
+  .product-review {
+    margin-top: 20px; /* Espaço entre a descrição e a avaliação */
+    padding: 20px; /* Adicione algum espaço interno para a área de avaliação */
+    background-color: #f5f5f5; /* Cor de fundo para destacar a área de avaliação */
+    border: 1px solid #ddd; /* Uma borda sutil para a área de avaliação */
+  }
+ 
+  .product-review h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+ 
+  /* Adicione estilos adicionais conforme necessário */
+ 
+h1{
+  color: #007cb9;
+}
+
+h1 .avaliacao{
+  color: #007cb9;
+  text-align: center;
+}
+  /* Avaliação */
+
+  .main{
+    max-width: 900px;
+    margin: 0 auto;
+}
+div.newPost{
+    width: 100%;
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px 0;
+    padding: 25px;
+
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
+}
+div.newPost div.infoUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.newPost div.infoUser div.imgUser{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #333;
+}
+div.newPost div.infoUser strong{
+    font-size: 16px;
+    margin-left: 10px;
+    color: #006494;
+}
+div.newPost form.formPost{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+input[type="textarea"]{
+    height: 90px;
+    background: #FBFBFB;
+    margin: 15px 0;
+    padding: 25px;
+    border-radius: 10px;
+    resize: none;
+    /*outline: none; */
+    border: 0;
+
+    font-weight: bold;
+    font-family: 'Cabin', sans-serif;
+    color: #727272;
+    border: 2px solid #FFF;
+}
+div.newPost form.formPost textarea:focus{
+    border:2px solid #23a0ff;
+  
+  }
+
+#titulopost{
+    height: 20px;
+    background: #FBFBFB;
+}
+
+div.newPost form.formPost div.iconsAndButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.newPost form.formPost div.iconsAndButton div.icons{
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+button.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    outline: none;
+    margin-right: 15px;
+    border: 0;
+
+    cursor: pointer;
+
+} 
+button.btnSubmitForm{
+    background: #006494;
+    padding: 10px 15px;
+	color: white;
+    font-weight: bold;
+    outline: none;
+	cursor: pointer;
+	
+    border: none;
+    border-radius: 10px;
+    transition: background 0.4s;
+}
+button.btnSubmitForm:hover{
+    background: #007cb9;
+}
+
+#Dados {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Estilos para entrada de dados */
+input[type="text"] {
+    width: 100%;
+    height: 90px;
+    margin: 5px 0;
+    padding: 25px;
+    border-radius: 10px;
+    resize: none;
+    border: 0;
+    outline: none; 
+    background: #dddfe0;
+    
+    font-weight: bold;
+    font-family: 'Cabin', sans-serif;
+    color: #727272;
+    border: 2px solid #FFF;
+}
+
+
+ul.posts li.post{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #FFF;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.05);
+}
+li.post >p{
+    width: 100%;
+    margin: 15px 0;
+    font-weight: bold;
+    color: #727272;
+}
+div.infoUserPost {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+div.imgUserPost{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #333;
+}
+
+div.nameAndHour {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+div.nameAndHour >strong{
+    color: #007cb9;
+}
+div.nameAndHour >p{
+    color: #d1d1d1;
+    font-size: 16px;
+}
+
+div.actionBtnPost{
+    display: flex;
+    align-items: center;
+
+}
+button.filesPost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 20px;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px;
+
+    background: #006494;    
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;         
+    
+    transition: background 0.2s;             
+}
+button.filesPost:hover{
+    background: #02415e;
+}
+button.filesPost img{
+    margin-right: 5px;
+}
+
+/* Estilize o botão "Curtir" quando clicado */
+.like.clicked {
+    background-color: #fc4b4b; /* ou a cor que você preferir */
+    color: white; /* Define a cor do texto para garantir que seja visível */
+}
+/* Botão publicar do comentario: */
+button#btncoment{
+    float: right;
+}
+input.image{
+background-image: url(icones/img.svg);
+}
+.ImagePost{
+    width: 400px;
+    height: 300px;
+}
+.delete{
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#file-name{
+    padding: 10px;
+}

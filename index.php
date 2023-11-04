@@ -120,7 +120,10 @@ session_start();
 								<span class="titulo-item"><?=utf8_encode($nome)?></span>
 								<?php echo "<img src=\"data:image/jpg;base64," .  base64_encode($data)  . "\" class=\"img-item\"/>";?>
 								<span class="precio-item"><?=$preco?></span>
-								<button class="boton-item" id="ver-produto-btn">Ver produto</button>
+								<form class="carrinho" method="post" action="produto_especifico/produto.php">
+									<input type="hidden" name="produto_id" value="<?=$codigo?>">
+									<button class="boton-item" type="submit" id="ver-produto-btn">Ver produto</button>
+								</form>
 							</div>
 
 				<?php
