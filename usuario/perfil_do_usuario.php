@@ -58,17 +58,13 @@ if ($_SESSION['tipo'] === 'cliente') {
 
                 $dataDeNascimento = implode("/",array_reverse(explode("-",$dataNascimento)));
 
-                if(isset($usuario['foto'])){
-                    $midia = $usuario['Foto'];
-                    $imagem = imagecreatefromstring($midia);
-                    ob_start();
-                    imagejpeg($imagem, null, 80);
-                    $data = ob_get_contents();
-                    ob_end_clean();
-                } else{
-                    $midia = NULL;
-                    $data = NULL;
-                }
+                $midia = $usuario['Foto'];
+                $imagem = imagecreatefromstring($midia);
+                ob_start();
+                imagejpeg($imagem, null, 80);
+                $data = ob_get_contents();
+                ob_end_clean();
+                
         ?>
 
         <!--SOMENTE MOSTRA OS DADOS-->
