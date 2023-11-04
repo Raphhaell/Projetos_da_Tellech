@@ -66,13 +66,13 @@ session_start();
 				</div>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="carrossel/c_image1.png" class="d-block w-100" alt="..." >
+						<img src="carrossel/tipodeficiencia.jpg" class="d-block w-100" alt="..." >
 					</div>
 					<div class="carousel-item">
-						<img src="carrossel/c_image2.png" class="d-block w-100" alt="...">
+						<img src="carrossel/ta.jpg" class="d-block w-100" alt="...">
 					</div>
 					<div class="carousel-item">
-						<img src="carrossel/c_image3.png" class="d-block w-100" alt="...">
+						<img src="carrossel/exemplota.jpg" class="d-block w-100" alt="...">
 					</div>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

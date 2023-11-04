@@ -43,7 +43,7 @@ header{ /* Cabeçalho */
 .navmenu a{
 	display: block;
 	color: #FFF;
-	font-size: 20px;
+	font-size: 23px;
 	text-transform: capitalize;
 	padding: 10px 20px;
 	font-weight: 400;
@@ -124,7 +124,7 @@ header{ /* Cabeçalho */
 .menu-hamburguer a{
 	text-decoration: none;
 	color: #ffffff;
-	font-size: 20px;
+	font-size: 23px;
 	transition: all .42s ease;
 }
 
