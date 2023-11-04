@@ -1,5 +1,6 @@
 <?php
 include_once("./cod_conexao.php");
+session_start();
 ?>
 
 
@@ -67,7 +68,7 @@ include_once("./cod_conexao.php");
         <form class="carrinho" method="POST" action="../carrinho/gerenciar_carrinho.php">
             <input type="hidden" name="produto_id" value="<?=$produto_id?>">
             <input type="hidden" name="quantidade" value="1">
-            <button class="btn" type="submit">Adicionar ao carrinho</button>
+            <button class="btnCarrinho" type="submit">Adicionar ao carrinho</button>
         </form>
     </div>
 </section>
@@ -75,6 +76,8 @@ include_once("./cod_conexao.php");
 <?php
     }
 }
+
+$produto_id = $produto_id;
 ?>
 
 
@@ -84,7 +87,7 @@ include_once("./cod_conexao.php");
             <div class="newPost">
                 <div class="infoUser">
                     <div class="imgUser"></div>
-                    <strong>Nome do Usuário</strong>
+                    <strong><?=$_SESSION['nome']?></strong>
                 </div>
     
                 <!-- Formulário para fazer post-->
@@ -99,6 +102,7 @@ include_once("./cod_conexao.php");
                         <!-- <button class="btn"><img src="icones/video.svg" alt="Adicionar um vídeo"></button> -->
                         </div>
     
+                        <input type="hidden" name="produto_id" value="<?= $produto_id ?>">
                         <button type="submit" class="btnSubmitForm">Publicar</button>
                     </div>
                 </form><!-- Fecha Formulário para fazer post-->
@@ -116,11 +120,32 @@ include_once("./cod_conexao.php");
                 $tituloAvaliacao = $avaliacao['TituloAvaliacao'];
                 $conteudoAvaliacao = $avaliacao['ConteudoPublicacao'];
                 $dataPublicacao = $avaliacao['DataPublicacao'];
-                $dataDaPublicacao = implode("/",array_reverse(explode("-",$dataPublicacao)));
+                date_default_timezone_set('America/Sao_Paulo'); // Substitua 'America/Sao_Paulo' pelo fuso horário correto
+                $dataDaPublicacao = date('d/m/Y H:i:s', strtotime($dataPublicacao));
                 $imagemData = $avaliacao['MidiaAvaliacao'];
                 $comentario = $avaliacao['Comentario'];
                 $Id = $avaliacao['IdPublicacao'];
                 $idCliente = $avaliacao['Id'];
+
+                $sql = "SELECT nome FROM cliente WHERE Id = '$idCliente'";
+                $query = mysqli_query($conexao, $sql);
+
+                // Verifique se a consulta foi bem-sucedida
+                if ($query) {
+                    // Use a função mysqli_fetch_assoc para obter a linha de resultados como um array associativo
+                    $row = mysqli_fetch_assoc($query);
+
+                    if ($row) {
+                        // O nome do cliente está no array associativo com a chave "nome"
+                        $nome = $row['nome'];
+                    } else {
+                        // Não foi encontrado nenhum registro com o ID fornecido
+                        echo "Cliente não encontrado.";
+                    }
+                } else {
+                    // Se a consulta falhar, você pode lidar com o erro aqui
+                    echo "Erro na consulta: " . mysqli_error($conexao);
+                }
                 ?>
                     
                 <!-- Postagem 1 -->
@@ -128,14 +153,13 @@ include_once("./cod_conexao.php");
                     <div class="infoUserPost">
                         <div class="imgUserPost"></div>
                         <div class="nameAndHour">
-                            <strong>Nome do Usuário</strong>
+                            <strong><?=utf8_encode($nome)?></strong>
                             <p><?=utf8_encode($dataDaPublicacao)?></p>
                         </div>
                         <!-- Lida com a exclusão do Post  -->
                         <form action="excluir.php" method="POST">
                             <input type="hidden" name="id_publicacao" value="<?= $avaliacao['IdPublicacao'] ?>">
-                            <button type="submit" class="filesPost delete">
-                                <img src="icones/menu.svg" alt="Excluir" width="25px"> Excluir Post
+                            <button type="submit" class="filesPost delete" alt="Excluir" width="25px"> Excluir Post
                             </button>
                         </form>
                     </div>
