@@ -25,13 +25,14 @@
 		<ul>
 			<li><a href="../index.php">Home</a></li>
 			<li><a href="../produtos/produto.php">Produtos</a></li>
-			<li><a href="../FAQ/faq.html">FAQ</a></li>
 			<!--<li><a href="forum/forum.html">Fórum</a></li>-->
 			<li><a href="../empresa/empresa.html">Sobre Nós</a></li>
 
 			<li><a href="../usuario/perfil_do_usuario.php"><?=utf8_encode($_SESSION['nome']); ?></a></li>
-			<li><a href="../usuario/perfil_do_adm.php"><?=utf8_encode($_SESSION['nome']); ?></a></li>
-			<li><a href="../usuario/perfil_da_empresa.php"><?=utf8_encode($_SESSION['nome']); ?></a></li>
+
+			<li><a href="../cadastro/cadastro_administrador.html">Cadastro Administrador</a></li>
+			<li><a href="../cadastro/cadastro_empresa.html">Cadastro Empresa</a></li>
+			<li><a href="../cadastro_produto/cadastro_produto.html">Cadastro Produto</a></li>
 					
 			<li><a href="../login/logout.php">Logout</a></li>
 		</ul>

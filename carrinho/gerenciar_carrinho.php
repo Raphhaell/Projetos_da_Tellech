@@ -25,7 +25,9 @@ if (isset($_POST['produto_id']) && isset($_POST['quantidade'])) {
         // O produto não está no carrinho, então adicione-o com a quantidade especificada.
         $_SESSION['carrinho'][] = array(
             'produto_id' => $produto_id,
-            'quantidade' => $quantidade
+            'quantidade' => $quantidade,
+            'totalFormatado' => 0,
+            'totalGeralFormatado' => 0
         );
     }
 }
