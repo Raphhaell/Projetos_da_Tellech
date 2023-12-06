@@ -132,6 +132,25 @@ h3 {
     
 }
 
+/* Grandiente da Tellech*/
+.boxTellech {
+    padding: 3em;
+}
+
+.boxTellech h2{
+    color: #000;
+    text-align: center;
+    margin: 30px;
+}
+
+.boxTellech h3{
+    text-align: justify;
+    text-indent: 50px;
+    color: #000;
+    justify-content: center;
+}
+
+
 /* Rodapé*/
 
 @media (max-height:800px) {
